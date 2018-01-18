@@ -76,7 +76,7 @@ html, body {
 
 #home {
   min-height: 100vh;
-  background: url('../img/homeBG.jpg');
+  background: url('../img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -151,6 +151,3 @@ html, body {
       margin-top: 0;
   }
 }
-
-
-

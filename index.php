@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Automobili</title>
+		<title>Automobili</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-  </head>
+		<link href="src/css/bootstrap.min.css" rel="stylesheet">
+		<link href="src/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="src/css/main.css" type="text/css">
+	</head>
   <body>
     <nav id="myNavbar" class="navbar fixed-top navbar-expand-md navbar-inverse">
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +23,7 @@
           <li class="nav-item option"><a class="nav-link" href="#home">Naslovnica</a></li>
           <li class="nav-item option"><a class="nav-link" href="#about">O nama</a></li>
           <li class="nav-item option"><a class="nav-link" href="#contact">Kontakt</a></li>
-          <li class="nav-item option"><a class="nav-link" href="./login.php">Prijava</a></li>
+          <li class="nav-item option"><a class="nav-link" href="app/index.php">Prijava</a></li>
         </ul>
       </div>
     </nav>
@@ -33,7 +32,7 @@
       <section id="home" class="row d-flex flex-column justify-content-center align-items-center">
         <h1 class="text-center">RoRaOs.ba</h1>
         <p class="text-center">Mi Vas pokrećemo!</p>
-        <a href="app/public/index.php"><button type="button" class="start" name="button">Registracija</button></a>
+        <a href="app/login/register.php"><button type="button" class="start" name="button">Registracija</button></a>
       </section>
 
       <section id="about">
@@ -87,10 +86,11 @@
           </div>
       </section>
     </div>
-    <script src="https://use.fontawesome.com/f1e7ae096d.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascript/index.js"></script>
+
+	<script src="src/javascript/jquery-3.2.1.min.js"></script>
+	<script src="src/javascript/popper.min.js"></script>
+	<script src="src/javascript/bootstrap.min.js"></script>
+	<script src="src/javascript/index.js" type="text/javascript"></script>
+
   </body>
 </html>
