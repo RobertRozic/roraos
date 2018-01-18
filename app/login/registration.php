@@ -1,12 +1,4 @@
 <?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/SMTP.php';
-
 $email = $mysqli->escape_string($_POST['email']);
 $name = $mysqli->escape_string($_POST['name']);
 $name =  explode(" ", $name);
@@ -37,36 +29,17 @@ if ( $result->num_rows > 0 ) {
 
 	if ( $mysqli->query($sql) ){
 
-		$mail = new PHPMailer();
+		/*$to      = $email;
+        $subject = 'Roraos potvrda racuna';
+        $message_body = 'Postovani '.$first_name.',
+			Hvala vam na registraciji na nas servis.
+			Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
+			domena.com/app/login/verify.php?email='.$email.'&hash='.$hash;
 
-	    //Server settings
-	    $mail->SMTPDebug = 0;
-	    $mail->isSMTP();
-	    $mail->Host = 'smtp.zoho.com';
-	    $mail->SMTPAuth = true;
-	    $mail->Username = 'kontakt@svatovi.online';
-	    $mail->Password = 'SWAT123!';
-	    $mail->SMTPSecure = 'tls';
-	    $mail->Port = 587;
-
-	    //Recipients
-	    $mail->setFrom('kontakt@svatovi.online', 'Svatovi online');
-	    $mail->addAddress($email);
-
-	    //Content
-	    $mail->isHTML(true);
-	    $mail->Subject = 'Svatovi.online potvrda racuna';
-	    $mail->Body    = 'Postovani '.$first_name.',
-
-				Hvala vam na registraciji na nas servis.
-				Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
-
-				https://www.svatovi.online/app/public/login/verify.php?email='.$email.'&hash='.$hash;
-
-	    if($mail->send()){
+	    if(mail($to, $subject, $message_body, 'From: no-reply@roraos.com')){
 	 		$_SESSION['message'] = "Provjerite vaš e-mail za potvrdu računa.";
 			header("location: message.php");
-   		}
+   		}*/
 
 	} else {
 		$_SESSION['message'] = 'Registracija nije uspjela.';
