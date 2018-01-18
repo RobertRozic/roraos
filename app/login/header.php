@@ -15,6 +15,7 @@ $header .= <<<HTML
 		<link href="../../src/css/bootstrap.min.css" rel="stylesheet">
 		<link href="../../src/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
 		<link href="../../src/css/login.css" rel="stylesheet" type="text/css">
+
 	</head>
 	<body>
 HTML;
