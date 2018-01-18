@@ -11,6 +11,7 @@
 
 		<link href="src/css/bootstrap.min.css" rel="stylesheet">
 		<link href="src/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="src/css/navbar.css" type="text/css">
 		<link rel="stylesheet" href="src/css/main.css" type="text/css">
 	</head>
   <body>
