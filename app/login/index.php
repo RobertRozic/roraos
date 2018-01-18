@@ -19,9 +19,9 @@ $html .= <<<HTML
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item option"><a class="nav-link" href="#home">Naslovnica</a></li>
-          <li class="nav-item option"><a class="nav-link" href="#about">O nama</a></li>
-          <li class="nav-item option"><a class="nav-link" href="#contact">Kontakt</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../../index.php#home">Naslovnica</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../../index.php#about">O nama</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../../index.php#contact">Kontakt</a></li>
           <li class="nav-item option"><a class="nav-link" href="app/index.php">Prijava</a></li>
         </ul>
       </div>
@@ -29,7 +29,7 @@ $html .= <<<HTML
 		<div class="container-fluid sign_up_in">
 			<div class="row d-flex flex-column justify-content-center align-items-center">
 				<div class="col-10 col-md-6 col-lg-4 form_wrapper">
-					<h1 class="svatovi text-center">Roraos.ba</h1>
+					<h1 class="automobili text-center">Roraos.ba</h1>
 					<form class="d-flex flex-column swat-form" method="post" action="index.php" autocomplete="off">
 						<div>
 							<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
@@ -42,9 +42,6 @@ $html .= <<<HTML
 						<a class="text-center" href="register.php">Nemate račun? Registrirajte se!</a>
 						<button type="submit" class="submit_btn" name="login">Prijava</button>
 					</form>
-					<div class="fb_login text-center">
-						<i class="fa fa-facebook-official"></i>&nbsp;Prijavi se putem facebooka
-					</div>
 					<div class="d-flex flex-row justify-content-between swat_bottom">
 						<a href="forgotForm.php" id="password_forgot">Zaboravili ste lozinku?</a>
 						<a href="">Pomoć</a>

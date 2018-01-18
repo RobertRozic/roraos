@@ -7,7 +7,7 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.svatovi {
+.automobili {
 	word-break: break-word;
 	color: #FFF;
 	text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.75);
@@ -15,7 +15,7 @@ html, body {
 }
 
 .sign_up_in {
-	background-image: url(../img/bg.jpg);
+	background-image: url(../img/bg-blur.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;

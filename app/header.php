@@ -10,7 +10,7 @@ $header .= <<<HTML
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-		<title>Svatovi.online</title>
+		<title>Roraos.ba</title>
 
 		<link href="../src/css/bootstrap.min.css" rel="stylesheet">
 		<link href="../src/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
