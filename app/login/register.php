@@ -23,7 +23,7 @@ $html .= <<<HTML
           <li class="nav-item option"><a class="nav-link" href="../../index.php#home">Naslovnica</a></li>
           <li class="nav-item option"><a class="nav-link" href="../../index.php#about">O nama</a></li>
           <li class="nav-item option"><a class="nav-link" href="../../index.php#contact">Kontakt</a></li>
-          <li class="nav-item option"><a class="nav-link" href="app/index.php">Prijava</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../index.php">Prijava</a></li>
         </ul>
       </div>
     </nav>
