@@ -19,13 +19,6 @@ $html .= <<<HTML
 				<div class="d-flex flex-column justify-content-center">
 					<h5 class="text-center message">{$message}</h5>
 					<a href="javascript:history.back()"><button class="submit_btn">Pokušaj ponovno</button></a>
-					<!--a href="resendVerify.php" class="text-center">
-						<?php
-							/*if($_SESSION['message'] == 'Korisnički račun nije potvrđen!'):
-								echo 'Niste primili naš e-mail? Pošalji ponovno!';
-							endif;*/
-						?>
-					</a-->
 				</div>
 			</div>
 		</div>

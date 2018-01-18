@@ -21,12 +21,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
         $message_body = 'Postovani '.$first_name.',
 			Zatrazili ste resetiranje lozinke za vas korisnicki racun.
 			Molimo kliknite na link ispod kako bi resetirali vasu lozinku:
-			https://www.svatovi.online/app/public/login/reset.php?email='.$email.'&hash='.$hash;
+			https://www.svatovi.online/app/public/login/reset.php?email='.$email.'&hash='.$hash;**/
 
-		if(mail($to, $subject, $message_body, 'From: no-reply@roraos.com');){
+		//if(mail($to, $subject, $message_body, 'From: no-reply@roraos.com');){
 			$_SESSION['message'] = "Provjerite vaš e-mail za resetiranje lozinke.";
 			header("location: message.php");
-		}*/
+		//}
   	}
 }
 
