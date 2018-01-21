@@ -57,7 +57,7 @@ $html .= <<<HTML
 					<button type="submit" class="submit_btn" name="register">Registriraj se</button>
 				</form>
 				<div class="d-flex flex-row justify-content-end swat_bottom">
-					<a href="">Pomoć</a>
+					<a href="pomoc.php">Pomoć</a>
 				</div>
 			</div>
 		</div>

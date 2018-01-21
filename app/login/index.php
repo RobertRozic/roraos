@@ -44,7 +44,7 @@ $html .= <<<HTML
 					</form>
 					<div class="d-flex flex-row justify-content-between swat_bottom">
 						<a href="forgotForm.php" id="password_forgot">Zaboravili ste lozinku?</a>
-						<a href="">Pomoć</a>
+						<a href="pomoc.php">Pomoć</a>
 					</div>
 				</div>
 			</div>
