@@ -1,4 +1,12 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/SMTP.php';
+
 $email = $mysqli->escape_string($_POST['email']);
 $name = $mysqli->escape_string($_POST['name']);
 $name =  explode(" ", $name);
@@ -27,22 +35,39 @@ if ( $result->num_rows > 0 ) {
 	$sql = "INSERT INTO users (first_name, last_name, email, phone, password, hash) "
 			. "VALUES ('$first_name','$last_name','$email', '$phone', '$password', '$hash')";
 
-	if ( $mysqli->query($sql) ){
+	if ($mysqli->query($sql)){
 
-		/*$to      = $email;
-        $subject = 'Roraos potvrda racuna';
-        $message_body = 'Postovani '.$first_name.',
-			Hvala vam na registraciji na nas servis.
-			Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
-			domena.com/app/login/verify.php?email='.$email.'&hash='.$hash;
+		$mail = new PHPMailer();
 
-	    if(mail($to, $subject, $message_body, 'From: no-reply@roraos.com')){
-	 		$_SESSION['message'] = "Provjerite vaš e-mail za potvrdu računa.";
+		//Server settings
+		$mail->SMTPDebug = 0;
+		$mail->isSMTP();
+		$mail->Host = 'smtp.gmail.com';
+		$mail->SMTPAuth = true;
+		$mail->Username = 'roraosauto@gmail.com';
+		$mail->Password = 'ostamararoza';
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = 587;
+
+		//Recipients
+		$mail->setFrom('roraosauto@gmail.com', 'Roraos');
+		$mail->addAddress($email);
+
+		//Content
+		$mail->isHTML(true);
+		$mail->Subject = 'Roraos potvrda racuna';
+		$mail->Body    = 'Postovani '.$first_name.',
+				Hvala vam na registraciji na nas servis.
+				Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
+				https://domena.com/app/login/verify.php?email='.$email.'&hash='.$hash;
+
+		if($mail->send()){
+			$_SESSION['message'] = "Provjerite vaš e-mail za potvrdu računa.";
 			header("location: message.php");
-   		}*/
+		}
 
 	} else {
-		$_SESSION['message'] = 'Registracija nije uspjela.';
+		$_SESSION['message'] = "Registracija nije uspjela.";
 		header("location: error.php");
 	}
 

@@ -25,6 +25,7 @@ if ($result->num_rows == 0) { // if user doesn't exist
 			$_SESSION['message'] = "Korisnički račun nije potvrđen!";
 			header("location: error.php");
 		}
+		
 	} else {
 		$_SESSION['message'] = "Neispravna lozinka.";
 		header("location: error.php");

@@ -4,30 +4,48 @@ require 'database.php';
 require 'session.php';
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-    $email = $mysqli->escape_string($_POST['email']);
-    $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
+	$email = $mysqli->escape_string($_POST['email']);
+	$result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
 
-    if ( $result->num_rows == 0 ){
-        $_SESSION['message'] = "Korisnik s ovom e-mail adresom ne postoji.";
-        header("location: error.php");
-    } else {
-        $user = $result->fetch_assoc();
-        $email = $user['email'];
-        $hash = $user['hash'];
-        $first_name = $user['first_name'];
+	if ( $result->num_rows == 0 ){
+		$_SESSION['message'] = "Korisnik s ovom e-mail adresom ne postoji.";
+		header("location: error.php");
+	} else {
+		$user = $result->fetch_assoc();
+		$email = $user['email'];
+ 		$hash = $user['hash'];
+		$first_name = $user['first_name'];
 
-		/*$to      = $email;
-        $subject = 'Roraos resetiranje lozinke';
-        $message_body = 'Postovani '.$first_name.',
+		$mail = new PHPMailer();
+
+		//Server settings
+		$mail->SMTPDebug = 0;
+		$mail->isSMTP();
+		$mail->Host = 'smtp.gmail.com';
+		$mail->SMTPAuth = true;
+		$mail->Username = 'roraosauto@gmail.com';
+		$mail->Password = 'ostamararoza';
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = 587;
+
+		//Recipients
+		$mail->setFrom('roraosauto@gmail.com', 'Roraos');
+		$mail->addAddress($email);
+
+		//Content
+		$mail->isHTML(true);
+
+		$mail->Subject = 'Roraos resetiranje lozinke';
+		$mail->Body    = 'Postovani '.$first_name.',
 			Zatrazili ste resetiranje lozinke za vas korisnicki racun.
 			Molimo kliknite na link ispod kako bi resetirali vasu lozinku:
-			https://www.svatovi.online/app/public/login/reset.php?email='.$email.'&hash='.$hash;**/
+			https://domena.com/app/login/reset.php?email='.$email.'&hash='.$hash;
 
-		//if(mail($to, $subject, $message_body, 'From: no-reply@roraos.com');){
+		if($mail->send()){
 			$_SESSION['message'] = "Provjerite vaš e-mail za resetiranje lozinke.";
 			header("location: message.php");
-		//}
-  	}
+		}
+	}
 }
 
 require 'header.php';
