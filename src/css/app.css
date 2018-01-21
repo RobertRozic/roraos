@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Italianno|Roboto&subset=latin-ext');
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+.dashboard-main {
+	background-image: url(../img/bg.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+.dashboard {
+	padding: 20px 0;
+}
+
+.dashboard>div {
+	min-width: 40vw;
+}
