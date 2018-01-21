@@ -27,12 +27,12 @@ $html .= <<<HTML
 			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
 				<h1 class="automobili text-center">Roraos.ba</h1>
 				<h5 class="automobili text-center">Kontaktiraj podršku</h5>
-				<form class="d-flex flex-column swat-form " method="post" action="pomocSend.php" autocomplete="off" >
+				<form class="d-flex flex-column swat-form " method="post" action="pomocMail.php" autocomplete="off" >
 					<div>
 						<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" name="email" placeholder="Unesite Vaš E-mail" required>
 					</div>
-					<textarea id="textPomoc" rows="6" placeholder="Dje gori .."></textarea>
+					<textarea id="textPomoc" name="tekst" rows="6" placeholder="Dje gori .."></textarea>
 					<button type="submit" class="submit_btn" name="saljiMail">Pošalji mail</button>
 				</form>
 			</div>
