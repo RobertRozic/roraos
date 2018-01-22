@@ -16,32 +16,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  		$hash = $user['hash'];
 		$first_name = $user['first_name'];
 
-		$mail = new PHPMailer();
-
-		//Server settings
-		$mail->SMTPDebug = 0;
-		$mail->isSMTP();
-		$mail->Host = 'smtp.gmail.com';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'roraosauto@gmail.com';
-		$mail->Password = 'ostamararoza';
-		$mail->SMTPSecure = 'tls';
-		$mail->Port = 587;
-
-		//Recipients
-		$mail->setFrom('roraosauto@gmail.com', 'Roraos');
-		$mail->addAddress($email);
-
-		//Content
-		$mail->isHTML(true);
-
-		$mail->Subject = 'Roraos resetiranje lozinke';
-		$mail->Body    = 'Postovani '.$first_name.',
+		$to      = $email;
+		$subject = 'Roraos potvrda racuna';
+		$message_body = 'Postovani '.$first_name.',
 			Zatrazili ste resetiranje lozinke za vas korisnicki racun.
 			Molimo kliknite na link ispod kako bi resetirali vasu lozinku:
-			https://domena.com/app/login/reset.php?email='.$email.'&hash='.$hash;
+			https://roraos.amplius.tech/app/login/reset.php?email='.$email.'&hash='.$hash;
 
-		if($mail->send()){
+		if(mail($to, $subject, $message_body, 'From: no-reply@roraos.tech')){
 			$_SESSION['message'] = "Provjerite vaš e-mail za resetiranje lozinke.";
 			header("location: message.php");
 		}

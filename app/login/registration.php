@@ -1,12 +1,5 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/SMTP.php';
-
 $email = $mysqli->escape_string($_POST['email']);
 $name = $mysqli->escape_string($_POST['name']);
 $name =  explode(" ", $name);
@@ -37,32 +30,18 @@ if ( $result->num_rows > 0 ) {
 
 	if ($mysqli->query($sql)){
 
-		$mail = new PHPMailer();
+		$to      = $email;
+		$subject = 'Roraos potvrda racuna';
+		$message_body = 'Postovani '.$first_name.',
+			Hvala vam na registraciji na nas servis.
+			Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
+			https://roraos.amplius.tech/app/login/verify.php?email='.$email.'&hash='.$hash;
 
-		//Server settings
-		$mail->SMTPDebug = 0;
-		$mail->isSMTP();
-		$mail->Host = 'smtp.gmail.com';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'roraosauto@gmail.com';
-		$mail->Password = 'ostamararoza';
-		$mail->SMTPSecure = 'tls';
-		$mail->Port = 587;
-
-		//Recipients
-		$mail->setFrom('roraosauto@gmail.com', 'Roraos');
-		$mail->addAddress($email);
-
-		//Content
-		$mail->isHTML(true);
-		$mail->Subject = 'Roraos potvrda racuna';
-		$mail->Body    = 'Postovani '.$first_name.',
-				Hvala vam na registraciji na nas servis.
-				Molimo kliknite na link ispod kako bi potvrdili vas korisnicki racun.
-				https://domena.com/app/login/verify.php?email='.$email.'&hash='.$hash;
-
-		if($mail->send()){
+		if(mail($to, $subject, $message_body, 'From: no-reply@roraos.tech')){
 			$_SESSION['message'] = "Provjerite vaš e-mail za potvrdu računa.";
+			header("location: message.php");
+		} else {
+			$_SESSION['message'] = "Greška pri slanju maila za potvrdu.";
 			header("location: message.php");
 		}
 
