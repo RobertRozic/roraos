@@ -1,9 +1,9 @@
 <?php
 
 $host = 'localhost';
-$user = 'root';
-$pass = 'admin';
-$db = 'db_roraos';
+$user = 'amplius_roraos';
+$pass = 'osta3+1+2';
+$db = 'amplius_roraos';
 $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 ?>

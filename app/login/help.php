@@ -1,14 +1,20 @@
 <?php
 
 require 'database.php';
-
 require 'session.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+	if(isset($_POST['salji'])) {
+		require 'helpMail.php';
+	}
+}
+
 require 'header.php';
 
 $html = '';
-$html .= <<<HTML
 
-<nav id="myNavbar" class="navbar fixed-top navbar-expand-md navbar-inverse">
+$html .= <<<HTML
+	<nav id="myNavbar" class="navbar fixed-top navbar-expand-md navbar-inverse">
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
       </button>
@@ -27,13 +33,13 @@ $html .= <<<HTML
 			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
 				<h1 class="automobili text-center">Roraos.ba</h1>
 				<h5 class="automobili text-center">Kontaktiraj podršku</h5>
-				<form class="d-flex flex-column swat-form " method="post" action="helpMail.php" autocomplete="off" >
+				<form class="d-flex flex-column swat-form " method="post" action="help.php" autocomplete="off" >
 					<div>
 						<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" name="email" placeholder="Unesite Vaš E-mail" required>
 					</div>
-					<textarea id="textPomoc" name="tekst" rows="6" placeholder="Dje gori .."></textarea>
-					<button type="submit" class="submit_btn" name="saljiMail">Pošalji mail</button>
+					<textarea id="textPomoc" name="tekst" rows="6" placeholder="Dje gori .." required></textarea>
+					<button type="submit" class="submit_btn" name="salji">Pošalji mail</button>
 				</form>
 			</div>
 		</div>
@@ -41,6 +47,7 @@ $html .= <<<HTML
 HTML;
 
 echo $html;
+
 require 'footer.php';
 
 
