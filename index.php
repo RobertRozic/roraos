@@ -85,7 +85,11 @@
 
             <iframe class="col-12 col-md-6 map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1450.6378487836903!2d17.79208444744115!3d43.35034338999815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sba!4v1508950177271" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
+
       </section>
+              
+                <p id="copyright"> 2018 Roraos.ba © All rights reserved. </p>
+             
     </div>
 
 	<script src="src/javascript/jquery-3.2.1.min.js"></script>
