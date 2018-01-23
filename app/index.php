@@ -14,6 +14,7 @@ $html .= <<<HTML
 						<i aria-hidden="true" class="fas fa-2x fa-sign-out-alt option"></i>
 					</a>
 				</div>
+				<img src="../src/img/logo.png" class="img-fluid logo"/>
 				<h2 class="text-center">Dobrodošli na stranicu Roraos!</h2>
 				<p class="text-center">Hvala Vam na registraciji i strpljenju.<br>
 				(Radovi na stranici su u tijeku!)</p>

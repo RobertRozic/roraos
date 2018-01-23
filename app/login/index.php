@@ -29,7 +29,7 @@ $html .= <<<HTML
 		<div class="container-fluid sign_up_in">
 			<div class="row d-flex flex-column justify-content-center align-items-center">
 				<div class="col-10 col-md-6 col-lg-4 form_wrapper">
-					<h1 class="automobili text-center">Roraos.ba</h1>
+				<img src="../../src/img/logo.png" class="img-fluid logo"/>
 					<form class="d-flex flex-column swat-form" method="post" action="index.php" autocomplete="off">
 						<div>
 							<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>

@@ -53,12 +53,9 @@ html, body {
   padding: 20px;
 }
 
-#home > h1 {
-  font-size: 3rem;
-  color: rgb(255,255,255);
-  z-index: 1;
-  z-index: 999;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.logo{
+  max-height: 80px;
+  margin: 20px;
 }
 
 #home > p {
