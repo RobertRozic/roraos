@@ -39,31 +39,30 @@
 				<h2 class="text-center">O nama</h2>
 				<p class="text-center">Povezujemo Vas s drugim ljudima i njihovim automobilima. Bilo kada i bilo gdje Vam dajemo mogućnost da iznajmite automobil drugih korisnika ili pak da njima iznajmite svoj i tako zaradite nešto dodatnog novca!</p>
 				<div class="columns row">
-					<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
+					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
 						<i class="fa fa-3x fa-car about_icon"></i>
 						<p class="text-justify">Na našoj stranici će te pronaći raznovrstan izbor automobila koje u svakom trenutku mođete iznajmiti i koristiti. Isto tako, omogućili smo i Vama da vlastiti automobil iznajmite drugima u vrijeme kada ga ne koristite i tako profitirate. Izbor automobila seže od malih gradskih auta, preko terenaca, do luksuznih limuzina. Povezujemo i pokrećemo ljude na vrlo jednostavan i bezbolan način. U samo nekoliko klikova i par unešenih podataka možete postati koristnik naših usluga!
+						</p>
 					</div>
-					<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
-						<i class="fa fa-3x fa-list about_icon"></i>
-						<p class="text-justify">
-							<h2>F.A.Q.</h2>
-							<ul>
-								<li>Kako se mogu prijavit na vašu stranicu?</li>
-								<li>Vrlo jednostavno. Gumb za prijavu vas čeka na samoj naslovnici. Kroz daljnji proces registracije ćemo vas postepeno voditi nakon što ga kliknete!</li>
-								<br/>
-								<li>Koliko će me registracija i korištenje vaših usluga koštati?</li>
-								<li>Sve naše usluge su potpuno besplatne za korisnike!</li>
-								<br/>
-								<li>Čini se jednostavno. Je li par klikova stvarno sve što mi je potrebno?</li>
-								<li>Naravno, u samo 10 minuta možete početi koristiti našu stranicu. Iznajmiti vozila od drugih, i iznajmljivati Vaše vozilo drugima!</li>
-								<br/>
-							<ul>
-				  		</p>
-					</div>
-					<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
-						<i class="fa fa-3x fa-usd about_icon"></i>
+					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+						<i class="fa fa-3x fa-dollar-sign about_icon"></i>
 						<p class="text-justify">Nema potrebe da se brinete za Vaš novac! Plaćanje dogovarate s osobom kod koje automobil iznajmljujete. Tako ste sigurni da Vaš novac nitko neće uzeti preko interneta. Mi Vam dajemo račun i osiguranje u online formatu, te isti taj račun šaljemo drugoj strani. Na taj način ste osigurani da je cijena koju vidite na našoj stranici ona koju će te zapravo i platiti!
 						</p>
+					</div>
+					<div class="col-12 d-flex flex-column align-items-center">
+						<i class="fa fa-3x fa-list about_icon"></i>
+						<h2>F.A.Q.</h2>
+						<ul>
+							<li>Kako se mogu prijavit na vašu stranicu?</li>
+							<li>Vrlo jednostavno. Gumb za prijavu vas čeka na samoj naslovnici. Kroz daljnji proces registracije ćemo vas postepeno voditi nakon što ga kliknete!</li>
+							<br/>
+							<li>Koliko će me registracija i korištenje vaših usluga koštati?</li>
+							<li>Sve naše usluge su potpuno besplatne za korisnike!</li>
+							<br/>
+							<li>Čini se jednostavno. Je li par klikova stvarno sve što mi je potrebno?</li>
+							<li>Naravno, u samo 10 minuta možete početi koristiti našu stranicu. Iznajmiti vozila od drugih, i iznajmljivati Vaše vozilo drugima!</li>
+							<br/>
+						</ul>
 					</div>
 				</div>
 			</section>
