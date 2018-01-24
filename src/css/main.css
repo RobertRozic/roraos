@@ -120,10 +120,9 @@ html, body {
 
 #copyright{
   text-align: center;
-  color:white;
+  color: white;
   width: 100%;
-  background: #12175A;
-  font-size: 0.9em;
-  line-height: 2.8em;
+  background: #1565C0;
+  font-size: 0.8em;
   margin: 0!important;
 }

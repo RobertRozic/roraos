@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 
 html, body {
 	padding: 0;
@@ -20,6 +19,7 @@ html, body {
 	background-position: center;
 	background-size: cover;
 	min-height: 100vh;
+	padding-top: 60px;
 }
 
 .sign_up_in>div {
