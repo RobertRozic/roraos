@@ -65,8 +65,8 @@
 						</ul>
 					</div>
 				</div>
-			 	<audio autoplay>
-  			<source src="Rade.mp3" type="audio/mpeg"/>
+			 	<audio id="formula">
+  			<source src="formula.wav" type="audio/wav"/>
 				</audio>
 			</section>
 

@@ -43,5 +43,61 @@ $(document).ready(function(){
 		checkScroll();
 	});
 
+	$('.logo').click(
+   		function(){
+   			$('#formula')[0].play();
+        	var offset = $(this).offset();
+        	var originLeft = offset.left;
+        	$(this).animate(
+            {
+             	'right' : '400px'
+                
+            }, 800, function() {
+                $(this).animate({
+                    'left': originLeft
+                   
+            }, 400,function() {
+            	$(this).animate({            	
+            		'left' : '0px'
+            	}, 0)
+            } )
 
-});
+                      
+            });
+			});
+			});
+
+
+/*
+        $('.logo').click(
+   		function(){
+        	var offset = $(this).offset();
+        	var originLeft = offset.left;
+        	var originTop = offset.top;
+        	$(this).animate(
+            {
+             	'right' : '400px'
+                
+            }, 1200, function() {
+                $(this).animate({
+                    'left': originLeft
+                   
+            }, 500)
+
+             });
+                    });
+        
+    
+*/
+    
+
+      
+
+
+
+
+
+			
+		// body...
+
+
