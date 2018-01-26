@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 	//Navigation
- 	$('html').click(function() {
+	$('html').click(function() {
 		if($(window).width() < 768){
 			$('nav .collapse').collapse('hide');
 		}
- 	});
+	});
 
 	$('.navbar-nav a').click(function(){
 		if($(window).width() < 768){
@@ -43,61 +43,23 @@ $(document).ready(function(){
 		checkScroll();
 	});
 
-	$('.logo').click(
-   		function(){
-   			$('#formula')[0].play();
-        	var offset = $(this).offset();
-        	var originLeft = offset.left;
-        	$(this).animate(
-            {
-             	'right' : '400px'
-                
-            }, 800, function() {
-                $(this).animate({
-                    'left': originLeft
-                   
-            }, 400,function() {
-            	$(this).animate({            	
-            		'left' : '0px'
-            	}, 0)
-            } )
-
-                      
-            });
+	$('.logo').click(function(){
+		if(!$(this).is(':animated')){
+			$('#formula')[0].play();
+			var offset = $(this).offset();
+			var originLeft = offset.left;
+			var screenWidth = $(window).width();
+			console.log(originLeft);
+			console.log(screenWidth);
+			$(this).animate({'margin-right' : '400px'}, 800, function() {
+				$(this).animate({'margin-left': screenWidth + originLeft, 'margin-right' : 0}, 400, function() {
+					$(this).css('margin-left', 0);
+					$(this).css('margin-right', screenWidth + originLeft);
+					$(this).animate({'margin-left' : 20, 'margin-right' : 20}, 400);
+				})
 			});
-			});
+		}
+	});
 
-
-/*
-        $('.logo').click(
-   		function(){
-        	var offset = $(this).offset();
-        	var originLeft = offset.left;
-        	var originTop = offset.top;
-        	$(this).animate(
-            {
-             	'right' : '400px'
-                
-            }, 1200, function() {
-                $(this).animate({
-                    'left': originLeft
-                   
-            }, 500)
-
-             });
-                    });
-        
-    
-*/
-    
-
-      
-
-
-
-
-
-			
-		// body...
-
+});
 

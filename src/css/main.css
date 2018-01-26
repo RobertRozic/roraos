@@ -56,7 +56,7 @@ html, body {
 .logo{
   max-height: 80px;
   margin: 20px;
-  position: relative;
+  cursor: pointer;
 }
 
 #home > p {
