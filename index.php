@@ -19,7 +19,10 @@
 			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 			</button>
+				<img src="src/img/logo.png" class="navbar-brand"  id="brend"/>
+
 			<div class="collapse navbar-collapse" id="navbarResponsive">
+
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item option"><a class="nav-link" href="#home">Naslovnica</a></li>
 					<li class="nav-item option"><a class="nav-link" href="#about">O nama</a></li>
