@@ -34,3 +34,12 @@
 .nav-item:hover{
   background: rgba(255, 255, 255, 0.4)!important;
 }
+
+#copyright{
+  text-align: center;
+  color: white;
+  width: 100%;
+  background: #1565C0;
+  font-size: 0.8em;
+  margin: 0!important;
+}

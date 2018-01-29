@@ -19,8 +19,11 @@ $header .= <<<HTML
 
 	</head>
 	<body>
+
 HTML;
 
 echo $header;
+
+require 'navbar.php';
 
 ?>

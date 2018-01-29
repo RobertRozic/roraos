@@ -26,8 +26,9 @@
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item option"><a class="nav-link" href="#home">Naslovnica</a></li>
 					<li class="nav-item option"><a class="nav-link" href="#about">O nama</a></li>
-					<li class="nav-item option"><a class="nav-link" href="#contact">Kontakt</a></li>
-				<li class="nav-item option"><a class="nav-link" href="app/index.php">Prijava</a></li>
+					<li class="nav-item option"><a class="nav-link" href="#contact">O projektu</a></li>
+					<li class="nav-item option"><a class="nav-link" href="vizija.php">Vizija</a></li>
+					<li class="nav-item option"><a class="nav-link" href="app/index.php">Prijava</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -74,15 +75,15 @@
 			</section>
 
 			<section id="contact">
-				<h2 class="text-center text-white">O Projektu</h2>
-				<div class="row d-flex flex-row justify-content-center align-items-stretch">
-					<div class="col-12 col-md-6 contact_info text-white">
+
+				<div class="row d-flex flex-row justify-content-center">
+					<div class="col-12 col-md-6 contact_info text-center" id="projekt">
+						<h2 class="text-center">O Projektu</h2>
 						<h5>Razvoj web aplikacija, projekt #1 "Automobili"</h5>
 						Ivan Ostojić, Robert Rozić, Mario Rajič<br>
 						FSR Mostar, 2018.<br><br>
-
 						<h5>Korištene tehnologije</h5>
-						<ul>
+						<ul class="text-left">
 							<li>HTML 5</li>
 							<li>CSS</li>
 							<li>JQUERY</li>
