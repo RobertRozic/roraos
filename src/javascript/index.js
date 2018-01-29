@@ -49,8 +49,6 @@ $(document).ready(function(){
             var offset = $(this).offset();
             var originLeft = offset.left;
             var screenWidth = $(window).width();
-            console.log(originLeft);
-            console.log(screenWidth);
             $(this).animate({'margin-right' : '400px'}, 800, function() {
                 $(this).animate({'margin-left': screenWidth + originLeft, 'margin-right' : 0}, 400, function() {
                     $(this).css('margin-left', 0);
