@@ -41,16 +41,25 @@ $html .= <<<HTML
 					<a href="#" class="nav-link">Dojmovi</a>
 					</li>
 					</ul>
-            		<div class="row">
-            			<div class="col-12 profil-oglasi">One of three
+					<div class="container-fluid">
+            			<div class="row">
+            				<div class="col-12 profil-oglasi"> 
+            				<h5 class="text-center">AUDI A4</h5>
+            				<img src="../src/img/audi.jpg" class="img-fluid" />
+            			
+            				</div>
             			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-12 profil-oglasi">One of three
+            			<div class="row">
+            				<div class="col-12 profil-oglasi">
+            				<h5 class="text-center">AUDI A4</h5>
+            				<img src="../src/img/audi.jpg" class="img-fluid" />
+            				</div>
             			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-12 profil-oglasi">One of three
+            			<div class="row">
+            				<div class="col-12 profil-oglasi">
+            				<h5 class="text-center">AUDI A4</h5>
+            				<img src="../src/img/audi.jpg" class="img-fluid" />
+            				</div>
             			</div>
             		</div>
 				</div>

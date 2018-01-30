@@ -8,14 +8,15 @@
 	padding: 0;
 }
 #myprofileblue_top{
-	background-color: rgba(0, 0, 0, 0.4);
 	width:100%;
 	margin: 0;
 }
 #options{
 	width:100%;
 }
-
+#myprofileblue_top > .nav-tabs{
+	background-color: rgba(0, 0, 0, 0.4);
+}
 .nav-tabs .nav-link {
 	color:white;
 	border:none;
@@ -29,7 +30,9 @@
 	background: rgba(255, 255, 255, 0.4)!important;
 }
 .profil-oglasi{
-	margin:5px;
 	padding:10px;
 	border-bottom: 1px solid grey;
+}
+.profil-oglasi > img{
+	height:130px;
 }
