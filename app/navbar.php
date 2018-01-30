@@ -22,7 +22,7 @@ $navbar .= <<<HTML
               <img src="../src/img/blank-profile.png" class="img-fluid">
             </a>
             <div id="profile-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="profile.php">Moj profil - {$first_name}</a>
+              <a class="dropdown-item" href="profil.php">Moj profil - {$first_name}</a>
               <a class="dropdown-item" href="#">Pomoć</a>
               <a class="dropdown-item" href="login/logout.php">Odjava</a>
             </div>

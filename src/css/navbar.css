@@ -5,7 +5,7 @@
   transition: .5s ease;
 }
 
-.navbar-toggler{
+#myNavbar .navbar-toggler{
   position: absolute;
   right: 0;
   top: 0;
@@ -15,7 +15,7 @@
   margin-top: 6px!important;
 }
 
-.fa-bars{
+#myNavbar .fa-bars{
   color: #FFF !important;
 }
 
@@ -23,7 +23,7 @@
   min-height: 60px;
 }
 
-.nav-link {
+#myNavbar .nav-link {
   color: #FFF!important;
   cursor: pointer;
   text-align: center;
@@ -31,7 +31,7 @@
   padding: 0 15px !important;
 }
 
-.nav-item:hover{
+#myNavbar .nav-item:hover{
   background: rgba(255, 255, 255, 0.4)!important;
 }
 
