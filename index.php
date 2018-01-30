@@ -76,14 +76,14 @@
 					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
 						<h4>Test login:</h4>
 						<p class="text-justify">
-							E-mail: roraosauto@gmail.com<br>
+							E-mail: test<br>
 							Password: test<br>
 						</p>
 					</div>
 					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
 						<h4>Admin login:</h4>
 						<p class="text-justify">
-							E-mail: roraosauto2@gmail.com<br>
+							E-mail: admin<br>
 							Password: admin<br>
 						</p>
 					</div>

@@ -20,7 +20,7 @@ $html .= <<<HTML
 					<form class="d-flex flex-column roraos-form" method="post" action="index.php" autocomplete="off">
 						<div>
 							<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
-							<input type="email" name="email" placeholder="E-mail" required>
+							<input type="text" name="email" placeholder="E-mail" required>
 						</div>
 						<div>
 							<label><i class="fa fa-fw fa-lock" aria-hidden="true"></i></label>

@@ -1,4 +1,7 @@
 <?php
+
+header("location: search.php");
+
 require 'session.php';
 
 require 'header.php';
