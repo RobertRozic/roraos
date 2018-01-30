@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 21, 2018 at 06:20 PM
--- Server version: 5.7.20-0ubuntu0.16.04.1
+-- Generation Time: Jan 30, 2018 at 10:15 PM
+-- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,37 +23,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `cars`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `cars` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(12) NOT NULL,
-  `address` varchar(500) DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `hash` varchar(400) NOT NULL,
-  `account_type` varchar(255) NOT NULL DEFAULT 'user',
-  `status` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `type` varchar(30) NOT NULL,
+  `brand` varchar(30) NOT NULL,
+  `fuel` varchar(6) NOT NULL,
+  `price` int(11) NOT NULL,
+  `owner_id` int(11) NOT NULL,
+  `year_made` year(4) NOT NULL,
+  `mileage` int(20) NOT NULL,
+  `power` int(10) NOT NULL,
+  `transmission` varchar(10) NOT NULL,
+  `car_name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `cars`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `password`, `hash`, `account_type`, `status`) VALUES
-(38, 'Robert', 'RoziÄ‡', 'r.rozic97@gmail.com', '63125327', NULL, '$2y$10$Hn.aEHqI9IwVKcbhI2Gs1eDvzkblT1OtYUY8N3nfJkmTnNq/nUlY.', 'd86ea612dec96096c5e0fcc8dd42ab6d', 'user', 1);
+INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_made`, `mileage`, `power`, `transmission`, `car_name`) VALUES
+(1, 'sedan', 'toyota', 'diesel', 120, 111, 2007, 197000, 136, 'manual', 'Toyota Corolla'),
+(2, 'cabrio', 'bmw', 'petrol', 120, 111, 2008, 45000, 320, 'automatic', 'Bmw 330i'),
+(3, 'sportback', 'audi', 'petrol', 250, 111, 2013, 24323, 420, 'manual', 'Audi RS3'),
+(4, 'sedan', 'bmw', 'diesel', 70, 38, 2003, 221334, 145, 'manual', 'Bmw 320d');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `users`
+-- Indexes for table `cars`
 --
-ALTER TABLE `users`
+ALTER TABLE `cars`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,10 +65,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `cars`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+ALTER TABLE `cars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -29,6 +29,12 @@ html, body {
 	text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.75);
 }
 
+.flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .logo{
   max-height: 80px;
   margin: 20px;
@@ -71,3 +77,20 @@ html, body {
 .form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
 .form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
+
+/* Main app*/
+.blue-panel {
+	background-color: rgba(25, 181, 254, 0.8);
+	padding: 20px;
+}
+
+.detalji{
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	flex-direction: column;
+}
+
+.detalji h1{
+	width: 100%;
+}
