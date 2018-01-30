@@ -59,5 +59,10 @@ $(document).ready(function(){
         }
     });
 
+    //Popover Tehnologije
+
+    $('.popoverData').popover();
+    $('.popoverOption').popover({ trigger: "hover" });
+
 });
             

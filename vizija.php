@@ -31,7 +31,7 @@
 		</nav>
 		<div class="container-fluid">
 			<section id="vizija" class="row d-flex flex-column justify-content-center align-items-center">
-				<img src="src/img/logo.png" class="img-fluid logo"/>
+				<a href="index.php"><img src="src/img/logo.png" class="img-fluid logo"/></a>
 				<p class="text-center">Mi Vas pokrećemo!</p>
 				<h2>Vizija</h2>
 			</section>
