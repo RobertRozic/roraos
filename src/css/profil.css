@@ -1,0 +1,14 @@
+#myprofile{
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+}
+#myprofileblue{
+	background-color: rgba(25, 181, 254, 0.8);
+	padding: 0;
+}
+#myprofileblue_top{
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 50px;
+	width:100%;
+	margin: 0;
+}
