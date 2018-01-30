@@ -20,6 +20,7 @@ $header .= <<<HTML
 		<link href="../src/css/search.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+	<div id="app">
 HTML;
 
 echo $header;

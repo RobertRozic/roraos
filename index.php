@@ -67,6 +67,26 @@
 							<br/>
 						</ul>
 					</div>
+					<div class="col-12 d-flex flex-column align-items-center">
+						<i class="fa fa-3x fa-question"></i><br>
+						<h3 class="text-center">
+							Zanimaju vas testni podatci?<br><br>
+						</h3>
+					</div>
+					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+						<h4>Test login:</h4>
+						<p class="text-justify">
+							E-mail: roraosauto@gmail.com<br>
+							Password: test<br>
+						</p>
+					</div>
+					<div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+						<h4>Admin login:</h4>
+						<p class="text-justify">
+							E-mail: roraosauto2@gmail.com<br>
+							Password: admin<br>
+						</p>
+					</div>
 				</div>
 			 	<audio id="formula">
   					<source src="formula.wav" type="audio/wav"/>

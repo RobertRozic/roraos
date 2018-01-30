@@ -1,5 +1,5 @@
 <?php
-require 'session.php';
+//require 'session.php';
 
 require 'header.php';
 
@@ -46,7 +46,6 @@ $html .= <<<HTML
             				<div class="col-12 profil-oglasi"> 
             				<h5 class="text-center">AUDI A4</h5>
             				<img src="../src/img/audi.jpg" class="img-fluid" />
-            			
             				</div>
             			</div>
             			<div class="row">
@@ -62,12 +61,11 @@ $html .= <<<HTML
             				</div>
             			</div>
             		</div>
-				</div>
-
-				
+            	</div>
 			</div>
 		</div>
-	</div>
+		</div>
+
 HTML;
 
 echo $html;

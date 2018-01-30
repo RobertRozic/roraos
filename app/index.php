@@ -8,7 +8,7 @@ require 'navbar.php';
 $html = '';
 
 $html .= <<<HTML
-  <div class="container-fluid dashboard-main d-flex flex-column justify-content-center align-items-center">
+  <div class="container-fluid dashboard-main d-flex flex-column justify-content-center align-items-center" id="main-oglasi">
     <div class="row d-flex justify-content-center dashboard">
       <div class="col-10 carousel slide blue-panel" data-ride="carousel" id="carouselAuta">
         <div class="carousel-inner" role="listbox">
