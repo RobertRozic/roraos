@@ -9,13 +9,13 @@ $navbar .= <<<HTML
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item option"><a class="nav-link" href="../../index.php#home">Naslovnica</a></li>
-          <li class="nav-item option"><a class="nav-link" href="../../index.php#about">O nama</a></li>
-          <li class="nav-item option"><a class="nav-link" href="../../index.php#contact">O projektu</a></li>
-          <li class="nav-item option"><a class="nav-link" href="../../vizija.php">Vizija</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../index.php#home">Naslovnica</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../index.php#about">O nama</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../index.php#contact">O projektu</a></li>
+          <li class="nav-item option"><a class="nav-link" href="../vizija.php">Vizija</a></li>
           <li class="nav-item dropdown option">
             <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img id="profileDropImg" src="../src/img/blank-profile.png" class="img-fluid">
+              <img src="../src/img/blank-profile.png" class="img-fluid">
             </a>
             <div id="profile-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="profile.php">Moj profil - {$first_name}</a>
