@@ -15,28 +15,32 @@ $html .= <<<HTML
           <div class="carousel-item active">
             <div class="row">
               <div class="col-12 col-md-7 flex-center flex-column">
-                <img class="img-fluid oglas-slika" src="../src/img/audi.jpg" alt="First slide">
+                <img class="img-fluid oglas-slika" src="../src/img/audi.jpg">
               </div>
-              <div class="col-12 col-md-5 detalji flex-center flex-column">
-                <h1>AUDI A4</h1>
-                Vrsta vozila: Sedan<br>
-                Vrsta goriva: Benzin<br>
-                Jačina motora: 190KS<br>
-                Cijena: 120KM/dan
+              <div class="col-12 col-md-5 detalji">
+                <h1 class="text-center">AUDI A4</h1>
+                <p>
+                  Vrsta vozila: Sedan<br>
+                  Vrsta goriva: Benzin<br>
+                  Jačina motora: 190KS<br>
+                  Cijena: 120KM/dan
+                </p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
               <div class="col-12 col-md-7 flex-center flex-column">
-                <img class="img-fluid oglas-slika" src="../src/img/audi.jpg" alt="First slide">
+                <img class="img-fluid oglas-slika" src="../src/img/audi.jpg">
               </div>
-              <div class="col-12 col-md-5 detalji flex-center flex-column">
-                <h1>AUDI A6</h1>
-                Vrsta vozila: Sedan<br>
-                Vrsta goriva: Benzin<br>
-                Jačina motora: 190KS<br>
-                Cijena: 120KM/dan
+              <div class="col-12 col-md-5 detalji">
+                <h1 class="text-center">AUDI A6</h1>
+                <p>
+                  Vrsta vozila: Sedan<br>
+                  Vrsta goriva: Benzin<br>
+                  Jačina motora: 190KS<br>
+                  Cijena: 120KM/dan
+                </p>
               </div>
             </div>
           </div>

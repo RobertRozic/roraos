@@ -84,6 +84,13 @@ html, body {
 	padding: 20px;
 }
 
-#oglasi-controls{
+.detalji{
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	flex-direction: column;
+}
 
+.detalji h1{
+	width: 100%;
 }
