@@ -18,7 +18,7 @@ $html .= <<<HTML
 		<div class="row d-flex flex-column justify-content-center align-items-center">
 			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
 				<img src="../../src/img/logo.png" class="img-fluid logo"/>
-				<form class="d-flex flex-column swat-form" method="post" action="register.php" autocomplete="off">
+				<form class="d-flex flex-column roraos-form" method="post" action="register.php" autocomplete="off">
 					<div>
 						<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" name="email" placeholder="E-mail" required>
@@ -43,7 +43,7 @@ $html .= <<<HTML
 					<a class="text-center" href="index.php">Već ste registrirani? Prijavite se!</a>
 					<button type="submit" class="submit_btn" name="register">Registriraj se</button>
 				</form>
-				<div class="d-flex flex-row justify-content-end swat_bottom">
+				<div class="d-flex flex-row justify-content-end roraos_bottom">
 					<a href="help.php">Pomoć</a>
 				</div>
 			</div>

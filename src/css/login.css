@@ -42,7 +42,7 @@ html, body {
 	text-decoration: none;
 }
 
-.swat-form>div {
+.roraos-form>div {
 	display: flex;
 	color: #FFF;
 	flex-direction: row;
@@ -51,11 +51,11 @@ html, body {
 	margin: 10px 0;
 }
 
-.swat-form label {
+.roraos-form label {
 	margin: 0 10px !important;
 }
 
-.swat-form input {
+.roraos-form input {
 	background: transparent;
 	outline: transparent;
 	border: none;
@@ -72,7 +72,7 @@ html, body {
 	margin: 0;
 }
 
-.swat-form a {
+.roraos-form a {
 	margin-top: 40px;
 	font-size: 0.9rem;
 }
@@ -101,7 +101,7 @@ html, body {
 	padding: 5px 0;
 }
 
-.swat_bottom {
+.roraos_bottom {
 	font-size: 0.9rem;
 	margin-top: 40px;
 }
