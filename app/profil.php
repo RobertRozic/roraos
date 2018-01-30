@@ -41,11 +41,21 @@ $html .= <<<HTML
 					<a href="#" class="nav-link">Dojmovi</a>
 					</li>
 					</ul>
-            	
+            		<div class="row">
+            			<div class="col-12 profil-oglasi">One of three
+            			</div>
+            		</div>
+            		<div class="row">
+            			<div class="col-12 profil-oglasi">One of three
+            			</div>
+            		</div>
+            		<div class="row">
+            			<div class="col-12 profil-oglasi">One of three
+            			</div>
+            		</div>
 				</div>
 
-				<br>
-				<p class="text-center">Ovdje idu neki oglasi!</p>
+				
 			</div>
 		</div>
 	</div>
