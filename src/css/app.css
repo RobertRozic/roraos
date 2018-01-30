@@ -36,3 +36,19 @@ html, body {
   max-height: 80px;
   margin: 20px;
 }
+
+#profileDropdown img {
+  height: 25px;
+}
+
+#profile-menu{
+	background: rgb(25, 181, 254);
+}
+
+#profile-menu .dropdown-item{
+	color: white;
+}
+
+#profile-menu .dropdown-item:hover{
+	background: rgba(255, 255, 255, 0.4);
+}

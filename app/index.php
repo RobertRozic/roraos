@@ -3,6 +3,8 @@ require 'session.php';
 
 require 'header.php';
 
+require 'navbar.php';
+
 $html = '';
 
 $html .= <<<HTML

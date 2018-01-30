@@ -1,6 +1,6 @@
 #myNavbar{
   min-height: 60px;
-  background: rgba(25, 181, 254, 0.8);
+  background: rgb(25, 181, 254);
   padding: 0!important;
   transition: .5s ease;
 }
