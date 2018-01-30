@@ -18,10 +18,7 @@ html, body {
 
 .dashboard {
 	padding: 20px 0;
-}
-
-.dashboard>div {
-	min-width: 40vw;
+	width: 100%
 }
 
 .wrapper {
@@ -37,6 +34,7 @@ html, body {
   margin: 20px;
 }
 
+/* Appp navbar */
 #profileDropdown img {
   height: 25px;
 }
@@ -52,3 +50,24 @@ html, body {
 #profile-menu .dropdown-item:hover{
 	background: rgba(255, 255, 255, 0.4);
 }
+
+#search-form {
+	margin-left: 15px;
+}
+
+#search-form button{
+	color: white;
+	background: transparent;
+}
+
+#search-form > .form-control {
+	color: white;
+	background: transparent;
+}
+
+/* White placeholder */
+.form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */

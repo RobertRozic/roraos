@@ -8,6 +8,10 @@ $navbar .= <<<HTML
         <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
+        <form class="form-inline" id="search-form">
+          <input class="form-control mr-sm-6" type="search" placeholder="Pretražite oglase" aria-label="Search">
+          <button class="btn" type="submit"><i class="fa fa-2x fa-search"></i></button>
+        </form>
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item option"><a class="nav-link" href="../index.php#home">Naslovnica</a></li>
           <li class="nav-item option"><a class="nav-link" href="../index.php#about">O nama</a></li>
@@ -20,7 +24,7 @@ $navbar .= <<<HTML
             <div id="profile-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="profile.php">Moj profil - {$first_name}</a>
               <a class="dropdown-item" href="#">Pomoć</a>
-              <a class="dropdown-item" href="#">Odjava</a>
+              <a class="dropdown-item" href="login/logout.php">Odjava</a>
             </div>
           </li>
         </ul>
