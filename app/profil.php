@@ -29,16 +29,16 @@ $html .= <<<HTML
 				<div id="myprofileblue_top">
 					<ul class="nav nav-tabs">
 					<li class="nav-item">
-					<a href="#" class="nav-link active">Item One</a>
+					<a href="#" class="nav-link">Moji oglasi</a>
 					</li>
 					<li class="nav-item">
-					<a href="#" class="nav-link active">Item Two</a>
+					<a href="#" class="nav-link">Aktivne rezervacije</a>
 					</li>
-										<li class="nav-item">
-					<a href="#" class="nav-link active">Item Three</a>
+					<li class="nav-item">
+					<a href="#" class="nav-link">Povijest</a>
 					</li>
-										<li class="nav-item">
-					<a href="#" class="nav-link active">Item Four</a>
+					<li class="nav-item">
+					<a href="#" class="nav-link">Dojmovi</a>
 					</li>
 					</ul>
             	

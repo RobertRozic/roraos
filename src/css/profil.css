@@ -16,6 +16,15 @@
 	width:100%;
 }
 
-a.nav-link.active {
-	background-color: rgba(255, 255, 255, 0.8); 
+.nav-tabs .nav-link {
+	color:white;
+	border:none;
+}
+.nav-tabs .nav-link:active{
+	
+	background-color: rgba(25, 181, 254, 0.8);
+}
+.nav-tabs .nav-link:hover{
+	border-color:none;
+	background: rgba(255, 255, 255, 0.4)!important;
 }
