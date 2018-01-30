@@ -36,6 +36,15 @@
 				<h2>Vizija</h2>
 			</section>
 			<section id="vizija-tekst" class="row d-flex flex-column justify-content-center align-items-center">
+			<div class="col-10">
+				<p class="text-justify">
+					Roraos.ba (Automobili) je stranica koja je zamišljena da svim registriranim korisnicima omogući brzi pristup željenom vozilu bez obzira gdje se oni nalaze. Tu mogućnost bi korisnici trebali pružiti jedni drugima, tako što će kada se registriraju imati mogućnost i postaviti oglas za svoje vozilo koje će drugi moći iznajmiti. Realizacija ovakve ideje u teoriji se čini jednostavno, ali kao što smo i nače navikli, u praksi to ipak ide malo drugačije. Potrebno je napraviti siguran sustav u kojem će se svi podatci korisnika strogo čuvati, te je također potrebno i filtrirati sadržaj od neželjenih oglasa. Zbog toga, osim običnih, svakodnevnih korisnika, Roraos.ba ima i administratore kojima su dane veće ovlasti upravljanja svim oglasima. <br><br>
+
+					Princip rada je, kao što je već navedeno, vrlo jednostavan. U samo par koraka se možete registrirati, zatim potvrditi svoju registraciju putem e-maila i nakon toga ste smo nekoliko klikova udaljeni od vozila kojeg ste tražili. Isto tako, samo nekoliko klikova ste udaljeni od dodatne zarade novca tako što će te iznajmiti vlastiti automobil.<br><br>
+
+					Za ovaj projekt potrebno je koristiti i savladati dosta tehnologija za razvoj web aplikacija, a sve te tehnologije, te način na koji su one korištene, možete pregledati na našoj naslovnoj stranici ili <a href="index.php#projekt">klikom ovdje!</a>
+				</p>
+			</div>
 
 			</section>
 			<p id="copyright"> 2018 Roraos.ba © All rights reserved. </p>	 
