@@ -26,7 +26,23 @@ $html .= <<<HTML
 				(Radovi na stranici su u tijeku!)</p>
 			</div>
 			<div class="col-10 col-md-7 d-flex flex-column align-items-center wrapper" id="myprofileblue">
-				<div id="myprofileblue_top"></div>
+				<div id="myprofileblue_top">
+					<ul class="nav nav-tabs">
+					<li class="nav-item">
+					<a href="#" class="nav-link active">Item One</a>
+					</li>
+					<li class="nav-item">
+					<a href="#" class="nav-link active">Item Two</a>
+					</li>
+										<li class="nav-item">
+					<a href="#" class="nav-link active">Item Three</a>
+					</li>
+										<li class="nav-item">
+					<a href="#" class="nav-link active">Item Four</a>
+					</li>
+					</ul>
+            	
+				</div>
 
 				<br>
 				<p class="text-center">Ovdje idu neki oglasi!</p>
