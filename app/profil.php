@@ -41,7 +41,8 @@ $html .= <<<HTML
 					<a href="#" class="nav-link">Dojmovi</a>
 					</li>
 					</ul>
-            		<div class="row">
+					<div class="container-fluid">
+            		<div class="row con">
             			<div class="col-12 profil-oglasi">One of three
             			</div>
             		</div>
@@ -52,6 +53,7 @@ $html .= <<<HTML
             		<div class="row">
             			<div class="col-12 profil-oglasi">One of three
             			</div>
+            		</div>
             		</div>
 				</div>
 
