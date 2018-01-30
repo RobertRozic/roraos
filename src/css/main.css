@@ -7,8 +7,8 @@ html, body {
 }
 
 .container-fluid {
-	margin: 0!important;
-	padding: 0!important;
+  margin: 0!important;
+  padding: 0!important;
 }
 
 #myNavbar{
@@ -22,11 +22,11 @@ html, body {
 }
 
 #myNavbar.scrolled {
-  background: rgba(25, 181, 254, 0.8);
+  background: rgb(25, 181, 254);
 }
 
 #navbarResponsive > ul {
-  background: rgba(25, 181, 254, 0.8);
+  background: rgb(25, 181, 254);
 }
 
 @media (min-width: 768px){
@@ -132,6 +132,19 @@ html, body {
   border-radius: 10px;
 }
 
+#projekt img{
+  padding: 15px;
+  max-width: 100px;
+  max-height: 100%;
+  transition: transform .3s;
+}
+
+#projekt img:hover{
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+
 /* Vizija */
 #vizija{
   color: #FFF;
@@ -149,18 +162,4 @@ html, body {
 
 #vizija-tekst{
   min-height: 60vh;
-
-}
-
-.image{
-  padding:15px;
-  width: 100px;
-  transition: transform .3s;
-}
-
-.image:hover{
-
-  -ms-transform: scale(1.3); /* IE 9 */
-  -webkit-transform: scale(1.3); /* Safari 3-8 */
-  transform: scale(1.3); 
 }

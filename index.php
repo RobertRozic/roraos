@@ -83,16 +83,16 @@
 						Ivan Ostojić, Robert Rozić, Mario Rajič<br>
 						FSR Mostar, 2018.<br><br>
 						<h5>Korištene tehnologije</h5>
-            <img src="src/img/mht.png" class="image"/>
-            <img src="src/img/css.png" class="image"/>
-            <img src="src/img/sql.png" class="image"/>
-            <img src="src/img/php.png" class="image"/>
-            <br>
-            <img src="src/img/jqr.png" class="image"/>
-            <img src="src/img/ang.png" class="image"/>
-            <img src="src/img/bs.png"  class="image"/>
-            <img src="src/img/js.png"  class="image"/>
-						
+			            <img src="src/img/html.png"/>
+			            <img src="src/img/css.png"/>
+			           	<img src="src/img/js.png"/>
+			            <img src="src/img/php.png"/>
+			            <img src="src/img/jqr.png"/>
+			            <img src="src/img/sql.png"/>
+			            <img src="src/img/bs.png"/>
+			            <img src="src/img/vue.png"/>
+					</div>
+				</div>
 			</section>
 			<p id="copyright"> 2018 Roraos.ba © All rights reserved. </p>	 
 		</div>
