@@ -1,9 +1,18 @@
-
-#searchblue{
-	background-color: rgba(25, 181, 254, 0.8);
-	padding: 0;
+#oglasi{
+	width: 100%;
 }
+
 .oglas{
+	padding: 10px;
+}
+
+.oglas p {
+	margin: 0;
+}
+
+.oglas > div {
+	width: 100%;
+	text-align: center;
+	padding: 15px;
 	background-color: rgba(0, 0, 0, 0.4);
-	margin: 0px 40px;
 }

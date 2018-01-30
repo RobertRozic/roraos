@@ -18,7 +18,8 @@ html, body {
 
 .dashboard {
 	padding: 20px 0;
-	width: 100%
+	width: 100%;
+	padding-top: 70px;
 }
 
 .wrapper {
