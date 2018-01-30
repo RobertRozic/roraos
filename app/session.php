@@ -8,8 +8,8 @@ $email = $_SESSION['email'];
 $phone = $_SESSION['phone'];
 $address = $_SESSION['address'];
 
-if($_SESSION['logged_in'] != 'true') {
+/*if($_SESSION['logged_in'] != 'true') {
 	header('location: login/index.php');
 }
-
+*/
 ?>
