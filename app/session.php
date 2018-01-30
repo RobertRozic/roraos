@@ -9,7 +9,7 @@ $phone = $_SESSION['phone'];
 $address = $_SESSION['address'];
 
 if($_SESSION['logged_in'] != 'true') {
-	header('location: login/search.php');
+	header('location: login/index.php');
 }
 
 ?>
