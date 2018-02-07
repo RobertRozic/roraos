@@ -19,7 +19,7 @@ $html .= <<<HTML
 			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
 				<img src="../../src/img/logo.png" class="img-fluid logo"/>
 				<h5 class="text-center">Kontaktiraj podršku</h5>
-				<form class="d-flex flex-column roraos-form " method="post" action="help.php" autocomplete="off" >
+				<form class="d-flex flex-column roraos-form" method="post" action="help.php" autocomplete="off">
 					<div>
 						<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" name="email" placeholder="Unesite Vaš E-mail" required>

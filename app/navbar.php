@@ -13,6 +13,7 @@ $navbar .= <<<HTML
           <button class="btn" type="submit"><i class="fa fa-2x fa-search"></i></button>
         </form>
         <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item option"><a class="nav-link" href="index.php">Oglasi</a></li>
           <li class="nav-item option"><a class="nav-link" href="../index.php#home">Naslovnica</a></li>
           <li class="nav-item option"><a class="nav-link" href="../index.php#about">O nama</a></li>
           <li class="nav-item option"><a class="nav-link" href="../index.php#contact">O projektu</a></li>

@@ -1,4 +1,4 @@
-if(search_text){
+if(!search_text){
   var search_text = '';
 }
 
@@ -33,6 +33,11 @@ var app = new Vue({
     myCars() {
       return this.cars.filter(car =>{
         return car.owner_id == userId;
+      });
+    },
+    sponsored() {
+      return this.cars.filter(car =>{
+        return car.sponsored == 1;
       });
     }
   },
