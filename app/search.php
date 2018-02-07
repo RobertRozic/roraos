@@ -6,7 +6,7 @@ require 'header.php';
 $search_text = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
-	if(isset($_GET['search-text'])) {
+	if(isset($_GET['search'])) {
 		$search_text = $_GET['search'];
 	}
 }
@@ -20,7 +20,7 @@ $html .= <<<HTML
 		<div class="row d-flex justify-content-center dashboard">
 			<div class="col-10 col-md-10 d-flex flex-column align-items-center blue-panel">
 				<div class="row" id="oglasi">
-					<div v-for="car in filterCars" class="col-12 col-md-3 flex-center flex-column oglas">
+					<div v-for="car in filterCars" class="col-12 col-md-6 col-lg-3 flex-center flex-column oglas">
 						<div>
 							<h3>{{ car.car_name }}</h3>
 							<p> 
@@ -32,7 +32,6 @@ $html .= <<<HTML
 								Snaga : {{ car.power }}<br>
 								Mjenjač : {{ car.transmission }}<br>
 								Cijena : {{ car.price }} KM/dan<br>
-								<br>
 							</p>
 						</div>
 					</div>
@@ -40,6 +39,9 @@ $html .= <<<HTML
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var search_text = '$search_text';
+	</script>
 HTML;
 
 echo $html;

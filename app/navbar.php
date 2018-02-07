@@ -23,7 +23,7 @@ $navbar .= <<<HTML
             </a>
             <div id="profile-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="profil.php">Moj profil - {$first_name}</a>
-              <a class="dropdown-item" href="#">Pomoć</a>
+              <a class="dropdown-item" href="login/help.php">Pomoć</a>
               <a class="dropdown-item" href="login/logout.php">Odjava</a>
             </div>
           </li>

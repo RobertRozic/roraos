@@ -1,7 +1,7 @@
 <?php
 
 require '../../src/scripts/db.php';
-require 'session.php';
+session_start();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(isset($_POST['salji'])) {
@@ -18,8 +18,8 @@ $html .= <<<HTML
 		<div class="row d-flex flex-column justify-content-center align-items-center">
 			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
 				<img src="../../src/img/logo.png" class="img-fluid logo"/>
-				<h5 class="automobili text-center">Kontaktiraj podršku</h5>
-				<form class="d-flex flex-column swat-form " method="post" action="help.php" autocomplete="off" >
+				<h5 class="text-center">Kontaktiraj podršku</h5>
+				<form class="d-flex flex-column roraos-form " method="post" action="help.php" autocomplete="off" >
 					<div>
 						<label><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" name="email" placeholder="Unesite Vaš E-mail" required>

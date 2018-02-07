@@ -1,21 +1,25 @@
+if(search_text){
+  var search_text = '';
+}
+
 var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    search: '',
+    search: search_text,
     users : [],
     cars: []
   },
   methods: {
   	getCars: function(){
   		var self = this;
-  		$.get('../src/scripts/auta_JSON.php', function(data){
+  		$.get('../src/scripts/cars_JSON.php', function(data){
     		self.cars = data;
   		});
   	},
-    getUser: function(){
+    getUsers: function(){
       var self = this;
-      $.get('../src/scripts/user_JSON.php', function(data){
+      $.get('../src/scripts/users_JSON.php', function(data){
         self.users = data;
       });
     }
@@ -34,5 +38,6 @@ var app = new Vue({
   },
   beforeMount() {
   	this.getCars();
+    this.getUsers();
   }
 })
