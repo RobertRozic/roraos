@@ -1,6 +1,6 @@
 <?php
 
-require 'database.php';
+require '../../src/scripts/db.php';
 require 'session.php';
 
 if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
