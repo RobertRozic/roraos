@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2018 at 10:01 PM
+-- Generation Time: Feb 08, 2018 at 12:54 AM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -37,18 +37,20 @@ CREATE TABLE `cars` (
   `mileage` int(20) NOT NULL,
   `power` int(10) NOT NULL,
   `transmission` varchar(10) NOT NULL,
-  `car_name` varchar(30) NOT NULL
+  `car_name` varchar(30) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `sponsored` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cars`
 --
 
-INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_made`, `mileage`, `power`, `transmission`, `car_name`) VALUES
-(1, 'sedan', 'toyota', 'diesel', 120, 39, 2007, 197000, 136, 'manual', 'Toyota Corolla'),
-(2, 'cabrio', 'bmw', 'petrol', 120, 38, 2008, 45000, 320, 'automatic', 'Bmw 330i'),
-(3, 'sportback', 'audi', 'petrol', 250, 38, 2013, 24323, 420, 'manual', 'Audi RS3'),
-(4, 'sedan', 'bmw', 'diesel', 70, 38, 2003, 221334, 145, 'manual', 'Bmw 320d');
+INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_made`, `mileage`, `power`, `transmission`, `car_name`, `image`, `sponsored`) VALUES
+(1, 'sedan', 'toyota', 'diesel', 120, 39, 2007, 197000, 136, 'manual', 'Toyota Corolla', 'audi.jpg', 0),
+(2, 'cabrio', 'bmw', 'petrol', 120, 38, 2008, 45000, 320, 'automatic', 'Bmw 330i', 'audi.jpg', 0),
+(3, 'sportback', 'audi', 'petrol', 250, 38, 2013, 24323, 420, 'manual', 'Audi RS3', 'audi.jpg', 1),
+(4, 'sedan', 'bmw', 'diesel', 70, 38, 2003, 221334, 145, 'manual', 'Bmw 320d', 'audi.jpg', 1);
 
 -- --------------------------------------------------------
 
