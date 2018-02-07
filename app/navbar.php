@@ -8,8 +8,8 @@ $navbar .= <<<HTML
         <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <form class="form-inline" id="search-form">
-          <input class="form-control mr-sm-6" v-model="search" type="search" placeholder="Pretražite oglase" aria-label="Search">
+        <form class="form-inline" method="get" id="search-form" action="search.php">
+          <input class="form-control mr-sm-6" v-model="search" type="search" placeholder="Pretražite oglase" aria-label="Search" name="search">
           <button class="btn" type="submit"><i class="fa fa-2x fa-search"></i></button>
         </form>
         <ul class="nav navbar-nav ml-auto">

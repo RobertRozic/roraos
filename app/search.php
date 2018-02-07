@@ -3,6 +3,14 @@ require 'session.php';
 
 require 'header.php';
 
+$search_text = '';
+
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
+	if(isset($_GET['search-text'])) {
+		$search_text = $_GET['search'];
+	}
+}
+
 require 'navbar.php';
 
 $html = '';

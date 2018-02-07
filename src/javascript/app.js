@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     message: 'Hello Vue!',
     search: '',
+    users : [],
     cars: []
   },
   methods: {
@@ -11,14 +12,25 @@ var app = new Vue({
   		$.get('../src/scripts/auta_JSON.php', function(data){
     		self.cars = data;
   		});
-  	}
+  	},
+    getUser: function(){
+      var self = this;
+      $.get('../src/scripts/user_JSON.php', function(data){
+        self.users = data;
+      });
+    }
   },
   computed: {
   	filterCars() {
   		return this.cars.filter(car => {
-  			return car.brand.toLowerCase().includes(this.search.toLowerCase())
-  		})
-  	}
+  			return car.car_name.toLowerCase().includes(this.search.toLowerCase())
+  		});
+  	},
+    myCars() {
+      return this.cars.filter(car =>{
+        return car.owner_id == userId;
+      });
+    }
   },
   beforeMount() {
   	this.getCars();

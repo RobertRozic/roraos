@@ -3,37 +3,74 @@
 	color: black;
 	padding: 20px;
 }
+
+#myprofile img {
+	margin: 15px 0;
+}
+
 #myprofileblue{
 	background-color: rgba(25, 181, 254, 0.8);
 	padding: 0;
 }
+
 #myprofileblue_top{
 	width:100%;
 	margin: 0;
 }
+
 #options{
 	width:100%;
 }
+
+#profile-details i{
+	margin: 0px 10px;
+}
+
 #myprofileblue_top > .nav-tabs{
 	background-color: rgba(0, 0, 0, 0.4);
+	border: none;
+	border-color: transparent;
 }
+
 .nav-tabs .nav-link {
 	color:white;
 	border:none;
 }
-.nav-tabs .nav-link:active{
-	
+
+.nav-tabs .nav-link.active{
+	color: #fff;
 	background-color: rgba(25, 181, 254, 0.8);
 }
+
 .nav-tabs .nav-link:hover{
 	border-color:none;
 	background: rgba(255, 255, 255, 0.4)!important;
 }
+
 .profil-oglasi{
 	padding:10px;
-	border-bottom: 1px solid grey;
-}
-.profil-oglasi > img{
-	height:130px;
+	border-bottom: 1px solid #fff;
 }
 
+.profil-oglasi img{
+	margin: 10px 5px;
+}
+
+.profil-oglasi p {
+  text-align: center;
+}
+
+@media (min-width: 992px){
+  .profil-oglasi p {
+    text-align: left;
+  }
+}
+
+.add-car{
+	transition: ease .5s;
+}
+
+.add-car:hover{
+	background-color: rgba(255,255,255, 0.6);
+	cursor: pointer;
+}

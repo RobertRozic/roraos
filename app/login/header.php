@@ -9,6 +9,7 @@ $header .= <<<HTML
 		<meta charset="utf-8">
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<link rel="shortcut icon" href="../../src/img/favicon.ico" />
 
 		<title>Roraos.ba | Login</title>
 
