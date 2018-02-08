@@ -13,22 +13,26 @@ $html .= <<<HTML
       <div class="col-10 col-lg-3 wrapper" id="myprofile">
         <div class="d-flex flex-row justify-content-between" id="options">
           <a href="login/logout.php">
-            <i aria-hidden="true" class="fas fa-2x fa-sign-out-alt option"></i>
+            <i aria-hidden="true" class="fas fa-2x fa-sign-out-alt option-dark"></i>
           </a>
           <a href="editForm.php">
-            <i aria-hidden="true" class="fas fa-2x fa-edit option"></i>
+            <i aria-hidden="true" class="fas fa-2x fa-edit option-dark"></i>
           </a>
         </div>
-          <div class="flex-center flex-column">
-            <img src="../src/img/blank-profile.png" class="img-fluid">
-          </div>
-          <h5 class="text-center">$name</h5>
-          <p id="profile-details">
-            <i aria-hidden="true" class="fas fa-envelope option"></i> $email<br>
-            <i aria-hidden="true" class="fas fa-home option"></i> $address<br>
-            <i aria-hidden="true" class="fas fa-phone option"></i> +387$phone<br>
-          </p>
+        <div class="flex-center flex-column">
+          <img src="../src/img/blank-profile.png" class="img-fluid">
         </div>
+        <h5 class="text-center">$name</h5>
+        <p id="profile-details">
+          <i aria-hidden="true" class="fas fa-envelope"></i> $email<br>
+          <i aria-hidden="true" class="fas fa-home"></i> $address<br>
+          <i aria-hidden="true" class="fas fa-phone"></i> +387$phone<br>
+        </p>
+        <div class="row profil-oglasi flex-center flex-column add-car" data-toggle="modal" data-target="#myModal">
+          <h2>Dodajte oglas</h2>
+          <i class="fas fa-2x fa-plus-circle button-add"></i>
+        </div>
+      </div>
         <div class="col-10 col-lg-7 wrapper" id="myprofileblue">
           <div id="myprofileblue_top">
             <ul class="nav nav-tabs nav-fill">
@@ -46,11 +50,11 @@ $html .= <<<HTML
                 </li>
             </ul>
           </div>
-          <div class="container-fluid" >
+          <div class="container-fluid" id="profil_oglasi">
               <div v-for="car in myCars" class="row profil-oglasi flex-center">
                 <h3 class="text-center col-12">{{ car.car_name }}</h3>
                 <div class="col-12 col-lg-4 flex-center flex-column">
-                  <img src="../src/img/audi.jpg" class="img-fluid" />
+                  <img :src="'../src/img/uploads/' + car.image" class="img-fluid" />
                 </div>
                 <p class="col-12 col-lg-4">
                   Marka : {{ car.brand }}<br>
@@ -64,10 +68,6 @@ $html .= <<<HTML
                   Mjenjač : {{ car.transmission }}<br>
                   Cijena : {{ car.price }} KM/dan<br>
                 </p>
-              </div>
-              <div class="row profil-oglasi flex-center flex-column add-car" data-toggle="modal" data-target="#myModal">
-                <h2>Dodajte oglas</h2>
-                <i class="fas fa-2x fa-plus-circle button-add"></i>
               </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ $html .= <<<HTML
         </button>
       </div>
       <div class="modal-body d-flex flex-column justify-content-center">
-        <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/addCar.php" autocomplete="off" id="car-form">
+        <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/addCar.php" autocomplete="off" id="car-form" enctype="multipart/form-data">
           <div>
             <label>Ime automobila:</label>
             <input type="text" name="car_name" required>
@@ -110,7 +110,7 @@ $html .= <<<HTML
           </div>
           <div>
             <label>Godina:</label>
-            <select id="year"></select>
+            <select id="year" name="year"></select>
           </div>
           <div>
             <label>Kilometraža:</label>
@@ -129,11 +129,11 @@ $html .= <<<HTML
             <label>Cijena/Dan:</label>
             <input type="text" name="price" required>
           </div>  
-          <div>
+          <div class="roraos-file">
               <div class="input-group">
                 <label class="input-group-btn">
                   <span class="btn btn-primary">
-                      Pretraži&hellip; <input type="file" name="fileToUpload" required style="display: none;">
+                      Slika auta&hellip; <input type="file" id="fileToUpload" name="fileToUpload" required style="display: none;">
                   </span>
                 </label>
                 <input type="text" class="form-control" readonly>

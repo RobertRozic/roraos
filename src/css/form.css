@@ -74,6 +74,18 @@
 	margin:10px;
 }
 
+.roraos-form .input-group-btn{
+	margin: 0;
+}
+
+.roraos-form .roraos-file{
+	border-bottom: none;
+}
+
+.roraos-form .form-control:disabled, .form-control[readonly]{
+	background-color: transparent;
+}
+
 #myModal .modal-content{
 	background: rgb(25, 181, 254);
 	box-shadow: 8px 10px 20px 1px rgba(0, 0, 0, 0.75);
