@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2018 at 06:09 PM
+-- Generation Time: Feb 08, 2018 at 06:22 PM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -57,6 +57,21 @@ INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_ma
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contract`
+--
+
+CREATE TABLE `contract` (
+  `id` int(11) NOT NULL,
+  `date_from` date NOT NULL,
+  `date_to` date NOT NULL,
+  `car_id` int(11) NOT NULL,
+  `buyer_id` int(11) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -91,6 +106,12 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `phone`, `address
 ALTER TABLE `cars`
   ADD PRIMARY KEY (`id`),
   ADD KEY `owner_id` (`owner_id`);
+
+--
+-- Indexes for table `contract`
+--
+ALTER TABLE `contract`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
