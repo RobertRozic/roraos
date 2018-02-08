@@ -93,24 +93,31 @@ $html .= <<<HTML
             <label>Marka automobila:</label>
             <input type="text" name="brand" required>
           </div>
-          <div>
+          <div class="justify-content-center radio-roraos">
             <label>Gorivo:</label>
-            <input type="text" name="fuel" required>
+            <input type="radio" name="fuel" value="diesel" required>Diesel
+            <input type="radio" name="fuel" value="petrol" required>Benzin
           </div>
           <div>
             <label>Tip:</label>
-            <input type="text" name="type" required>
+            <select id="type" name="type">
+              <option value="sedan">Sedan</option>
+              <option value="cabrio">Kabriolet</option>
+              <option value="sportback">Sportback</option>
+              <option value="coupe">Coupe</option>
+              <option value="karavan">Karavan</option>
+            </select>
           </div>
           <div>
             <label>Godina:</label>
-            <input type="text" name="year" required>
+            <select id="year"></select>
           </div>
           <div>
             <label>Kilometraža:</label>
             <input type="text" name="mileage" required>
           </div>
           <div>
-            <label>Snaga:</label>
+            <label>Konjskih snaga:</label>
             <input type="text" name="power" required>
           </div>
           <div class="justify-content-center radio-roraos">
@@ -121,6 +128,16 @@ $html .= <<<HTML
           <div>
             <label>Cijena/Dan:</label>
             <input type="text" name="price" required>
+          </div>  
+          <div>
+              <div class="input-group">
+                <label class="input-group-btn">
+                  <span class="btn btn-primary">
+                      Pretraži&hellip; <input type="file" name="fileToUpload" required style="display: none;">
+                  </span>
+                </label>
+                <input type="text" class="form-control" readonly>
+              </div>
           </div>
           <button type="submit" class="hide-button"></button>
         </form>
@@ -135,6 +152,14 @@ $html .= <<<HTML
   var addCar = function () {
     $("#car-form").find('[type="submit"]').trigger('click');
   }
+
+var end = 1930;
+var start = new Date().getFullYear();
+var options = "";
+for(var year = start ; year >= end; year--){
+  options += "<option>"+ year +"</option>";
+}
+document.getElementById("year").innerHTML = options;
 </script>
 HTML;
 
