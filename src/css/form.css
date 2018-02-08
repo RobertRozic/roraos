@@ -34,3 +34,89 @@
 #edit-form .phone_input > input {
 	margin: 0;
 }
+
+/* Roraos form */
+.roraos-form > div {
+	display: flex;
+	color: #FFF;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 1px solid white;
+	margin: 10px 0;
+}
+
+.roraos-form label {
+	margin: 0 10px !important;
+}
+
+.roraos-form input {
+	background: transparent;
+	outline: transparent;
+	border: none;
+	color: #FFF;
+	padding-left: 5px;
+	flex-grow: 1;
+}
+
+.roraos-form .phone_input>p {
+	margin: 0 0 0 13px;
+}
+
+.roraos-form .phone_input>input {
+	margin: 0;
+}
+
+.roraos-form .roraos-form a {
+	margin-top: 40px;
+	font-size: 0.9rem;
+}
+
+.roraos-form .submit_btn {
+	display: block;
+	background: rgb(3, 169, 245);
+	color: white;
+	border: none;
+	margin: 10px 0;
+	cursor: pointer;
+	padding: 5px 0;
+	transition: 0.5s ease;
+	width: 100%;
+}
+
+.roraos-form .submit_btn:hover {
+	background: rgba(3, 169, 245, 0.8);
+}
+
+.roraos-form input[type="radio"] {
+	width: auto;
+	margin:10px;
+}
+
+#myModal .modal-content{
+	background: rgb(25, 181, 254);
+	box-shadow: 8px 10px 20px 1px rgba(0, 0, 0, 0.75);
+	padding: 20px 40px;
+	color: #FFF;
+	display: flex;
+	flex-direction: column; 
+}
+
+.submit_btn {
+	display: block;
+	background: rgba(255, 255, 255, 0.8);
+	color: rgb(25, 181, 254);
+	border: none;
+	margin: 10px 0;
+	cursor: pointer;
+	padding: 5px 0;
+	transition: 0.5s ease;
+	width: 100%;
+}
+
+.submit_btn:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.hide-button{
+	display: none;
+}

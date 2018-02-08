@@ -1,5 +1,5 @@
 <?php
-require 'session.php';
+session_start();
 
 if(isset($_SESSION['message']) AND !empty($_SESSION['message'])):
 	$message = $_SESSION['message'];

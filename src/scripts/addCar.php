@@ -8,16 +8,16 @@ $type = $mysqli->escape_string($_POST['type']);
 $brand = $mysqli->escape_string($_POST['brand']);
 $fuel = $mysqli->escape_string($_POST['fuel']);
 $price = $mysqli->escape_string($_POST['price']);
-$year = $mysqli->escape_string($_POST['year']);
+$year_made = $mysqli->escape_string($_POST['year']);
 $mileage = $mysqli->escape_string($_POST['mileage']);
-$fuel = $mysqli->escape_string($_POST['power']);
+$power = $mysqli->escape_string($_POST['power']);
 $transmission = $mysqli->escape_string($_POST['transmission']);
 $owner_id = $_SESSION['id'];
 
-require 'uploadImage.php';
+//require 'uploadImage.php';
 
 $sql = "INSERT INTO cars (type, brand, fuel, price, owner_id, year_made, mileage, power, transmission, car_name, image) "
-			. "VALUES ('$type','$brand','$fuel', '$price', '$owner_id', '$year_made', '$mileage', '$power', '$transmission', '$car_name', '$target_file')";
+			. "VALUES ('$type','$brand','$fuel', '$price', '$owner_id', '$year_made', '$mileage', '$power', '$transmission', '$car_name', 'audi.jpg')";
 
 if ( $mysqli->query($sql) ) {
 	$_SESSION['message'] = 'Uspjesno ste dodali oglas!';
