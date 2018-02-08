@@ -29,7 +29,7 @@ $html .= <<<HTML
             <i aria-hidden="true" class="fas fa-phone option"></i> +387$phone<br>
           </p>
         </div>
-        <div class="col-10 col-lg-7 flex-center flex-column wrapper" id="myprofileblue">
+        <div class="col-10 col-lg-7 wrapper" id="myprofileblue">
           <div id="myprofileblue_top">
             <ul class="nav nav-tabs nav-fill">
               <li class="nav-item">
@@ -131,12 +131,11 @@ $html .= <<<HTML
     </div>
   </div>
 </div>
-    <script>
-        var addCar = function () {
-            console.log("aaa");
-            $("#car-form").find('[type="submit"]').trigger('click');
-         }
-    </script>
+<script>
+  var addCar = function () {
+    $("#car-form").find('[type="submit"]').trigger('click');
+  }
+</script>
 HTML;
 
 echo $html;

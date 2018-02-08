@@ -15,12 +15,12 @@ var app = new Vue({
     cars: []
   },
   methods: {
-  	getCars: function(){
-  		var self = this;
-  		$.get('../src/scripts/cars_JSON.php', function(data){
-    		self.cars = data;
-  		});
-  	},
+    getCars: function(){
+      var self = this;
+      $.get('../src/scripts/cars_JSON.php', function(data){
+        self.cars = data;
+      });
+    },
     getUsers: function(){
       var self = this;
       $.get('../src/scripts/users_JSON.php', function(data){
@@ -29,11 +29,11 @@ var app = new Vue({
     }
   },
   computed: {
-  	filterCars() {
-  		return this.cars.filter(car => {
-  			return car.car_name.toLowerCase().includes(this.search.toLowerCase())
-  		}).sort(byName);
-  	},
+    filterCars() {
+      return this.cars.filter(car => {
+        return car.car_name.toLowerCase().includes(this.search.toLowerCase())
+      }).sort(byName);
+    },
     myCars() {
       return this.cars.filter(car =>{
         return car.owner_id == userId;
@@ -46,7 +46,7 @@ var app = new Vue({
     }
   },
   beforeMount() {
-  	this.getCars();
+    this.getCars();
     this.getUsers();
   }
 })
