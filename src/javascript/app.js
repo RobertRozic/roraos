@@ -2,6 +2,10 @@ if(!search_text){
   var search_text = '';
 }
 
+var byName = function (a, b){
+  return a.car_name.localeCompare(b.car_name);
+};
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -28,17 +32,17 @@ var app = new Vue({
   	filterCars() {
   		return this.cars.filter(car => {
   			return car.car_name.toLowerCase().includes(this.search.toLowerCase())
-  		});
+  		}).sort(byName);
   	},
     myCars() {
       return this.cars.filter(car =>{
         return car.owner_id == userId;
-      });
+      }).sort(byName);
     },
     sponsored() {
       return this.cars.filter(car =>{
         return car.sponsored == 1;
-      });
+      }).sort(byName);
     }
   },
   beforeMount() {
