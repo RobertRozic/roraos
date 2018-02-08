@@ -13,7 +13,8 @@ var app = new Vue({
     search: search_text,
     users : [],
     cars: [],
-    editCar: {}
+    editCar: {},
+    deleteCarId: undefined,
   },
   methods: {
     getCars: function(){
@@ -30,8 +31,10 @@ var app = new Vue({
     },
     setEditCar: function(car){
       this.editCar = car;
-      console.log(car);
-    }
+    },
+    setDeleteCar: function(id){
+      this.deleteCarId = id;
+    },
   },
   computed: {
     filterCars() {

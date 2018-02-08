@@ -53,7 +53,7 @@ $html .= <<<HTML
           <div class="container-fluid" id="profil_oglasi">
               <div v-for="car in myCars" class="row profil-oglasi flex-center">
                 <div class="col 12 d-flex justify-content-between">
-                   <i data-toggle="" data-target="" aria-hidden="true" class="option fas fa fa-times"></i>
+                   <i data-toggle="modal" data-target="#deleteModal" aria-hidden="true" v-on:click="setDeleteCar(id)" class="option fas fa fa-times"></i>
                    <i data-toggle="modal" data-target="#editCarModal" aria-hidden="true" v-on:click="setEditCar(car)" class="option fas fa fa-edit"></i>
                 </div>
                 <h3 class="text-center col-12">{{ car.car_name }}</h3>
@@ -228,6 +228,27 @@ $html .= <<<HTML
       </div>
     </div>
   </div>
+</div>
+
+<div class="modal fade roraos-modal" tabindex="-1" role="dialog" id="deleteModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+         <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/editCar.php" autocomplete="off" id="edit-car-form" enctype="multipart/form-data">
+         <input type="hidden" name="carId" :value="deleteCarId">
+         <button type="submit" class="hide-button"></button>
+         </form>
+            <div class="modal-header">
+                <h5>Potvrda uklanjanja oglasa</h5>
+            </div>
+            <div class="modal-body">
+                <p>Jeste li sigurni da želite ukloniti ovaj oglas?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
