@@ -62,11 +62,97 @@ $html .= <<<HTML
                 Cijena : {{ car.price }} KM/dan<br>
               </p>
             </div>
+
+                <div class="row profil-oglasi flex-center flex-column add-car" v-on:click = "updatePrice(car.price)" data-toggle="modal" data-target="#myModal">
+                 <h2>Rezerviraj</h2>
+                    <i class="fas fa-2x fa-plus-circle button-add"></i>
+                </div>
+
           </div>
+
+                
+
         </div>
     </div>
   </div>
+  <div class="modal fade" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content form_wrapper">
+      <div class="modal-header">
+        <h5 class="modal-title">Ispunite podatke za rezervaciju!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex flex-column justify-content-center">
+        <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/addContract.php" autocomplete="off" id="car-form">
+          <div>
+            <label>Datum od:</label>
+            <input type="date" name="date_from" id="date_from" v-on:change="updateTotal()" required>
+          </div>
+          <div>
+            <label>Datum do:</label>
+            <input type="date" name="date_to" id="date_to" v-on:change="updateTotal()" required>
+          </div>
+          <button type="submit" class="hide-button"></button>
+        </form>
+          <div class="d-flex flex-row justify-content-between">
+            <p>Ukupna cijena je:</p>
+            <div id="totalPrice">
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="submit_btn" name="submit" onclick="addCar()">Potvrdi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  var dateTo;
+  var dateFrom;
+  var cijena;
+  var totalPrice = 0;
+
+
+  var updatePrice = function (price) {
+    cijena = price;
+  }
+
+  var updateTotal = function (){
+    var dateFromInput = document.getElementById("date_from"); 
+    var dateToInput = document.getElementById("date_to");
+
+    dateToInput.min=dateFromInput.value;
+
+    if(dateFromInput.value>dateToInput.value) dateToInput.value=dateFromInput.value;
+
+    dateFrom = new Date(dateFromInput.value);
+    dateTo = new Date(dateToInput.value);
+
+    if(dateFromInput.value==dateToInput.value){
+      console.log("dobro je sve");
+      dateTo.setDate(dateTo.getDate() + 1);
+      dateToInput.value=dateTo.toISOString().split('T')[0];
+
+    };
+
+    var timeDiff = Math.abs(dateTo.getTime()-dateFrom.getTime());
+    var diffDays = Math.ceil(timeDiff/(1000*3600*24));
+
+    totalPrice = diffDays*cijena;
+
+    if (!isNaN(totalPrice)){ 
+    
+    document.getElementById("totalPrice").innerHTML = totalPrice + " KM";
+    }
+  };
+;
+</script>
 HTML;
+
 
 echo $html;
 
