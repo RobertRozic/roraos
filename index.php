@@ -89,7 +89,7 @@
 					</div>
 				</div>
 			 	<audio id="formula">
-  					<source src="formula.wav" type="audio/wav"/>
+  					<source src="src/formula.wav" type="audio/wav"/>
 				</audio>
 			</section>
 
