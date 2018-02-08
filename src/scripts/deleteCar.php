@@ -1,12 +1,13 @@
 <?php
   require 'db.php';
+  session_start();
 
-  $id = $mysqli->escape_string($_POST['id']);
+  $delete_id = $mysqli->escape_string($_POST['delete_id']);
 
-  $sql = "DELETE from cars WHERE id='$id'";
+  $sql = "DELETE from cars WHERE id='$delete_id'";
 
   if ( $mysqli->query($sql) ) {
-    $_SESSION['message'] = 'Uspjesno ste potvrdili rezervaciju!';
+    $_SESSION['message'] = "Uspjesno ste izbrisali oglas!";
     header("location: ../../app/login/message.php");
   } else {
     $_SESSION['message'] = 'Doslo je do pogreske!';

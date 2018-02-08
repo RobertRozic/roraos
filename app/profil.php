@@ -35,44 +35,52 @@ $html .= <<<HTML
       </div>
         <div class="col-10 col-lg-7 wrapper" id="myprofileblue">
           <div id="myprofileblue_top">
-            <ul class="nav nav-tabs nav-fill">
+            <ul class="nav nav-tabs nav-fill" role="tablist">
               <li class="nav-item">
-                <a href="#" class="nav-link active">Moji oglasi</a>
+                <a class="nav-link active" data-toggle="tab" href="#profil_oglasi" role="tab">
+                  Moji oglasi
+                </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Aktivne rezervacije</a>
+                <a class="nav-link" data-toggle="tab" href="#aktivne" role="tab">
+                  Aktivne rezervacije
+                </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Povijest</a>
+                <a href="#" class="nav-link disabled">
+                  Dojmovi
+                </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Dojmovi</a>
-                </li>
             </ul>
           </div>
-          <div class="container-fluid" id="profil_oglasi">
-              <div v-for="car in myCars" class="row profil-oglasi flex-center">
-                <div class="col 12 d-flex justify-content-between">
-                   <i data-toggle="modal" data-target="#deleteModal" aria-hidden="true" v-on:click="setDeleteCar(id)" class="option fas fa fa-times"></i>
-                   <i data-toggle="modal" data-target="#editCarModal" aria-hidden="true" v-on:click="setEditCar(car)" class="option fas fa fa-edit"></i>
+          <div class="tab-content">
+            <div class="container-fluid tab-pane active" role="tabpanel" id="profil_oglasi">
+                <div v-for="car in myCars" class="row profil-oglasi flex-center">
+                  <div class="col 12 d-flex justify-content-between">
+                     <i data-toggle="modal" data-target="#deleteModal" aria-hidden="true" v-on:click="setDeleteCar(car.id)" class="option fas fa fa-times"></i>
+                     <i data-toggle="modal" data-target="#editCarModal" aria-hidden="true" v-on:click="setEditCar(car)" class="option fas fa fa-edit"></i>
+                  </div>
+                  <h3 class="text-center col-12">{{ car.car_name }}</h3>
+                  <div class="col-12 col-lg-4 flex-center flex-column">
+                    <img :src="'../src/img/uploads/' + car.image" class="img-fluid" />
+                  </div>
+                  <p class="col-12 col-lg-4">
+                    Marka : {{ car.brand }}<br>
+                    Gorivo : {{ car.fuel }}<br>
+                    Tip : {{ car.type }}<br>
+                    Godina : {{ car.year_made}}<br>
+                  </p>
+                  <p class="col-12 col-lg-4">
+                    Kilometraža : {{ car.mileage }}<br>
+                    Snaga : {{ car.power }}<br>
+                    Mjenjač : {{ car.transmission }}<br>
+                    Cijena : {{ car.price }} KM/dan<br>
+                  </p>
                 </div>
-                <h3 class="text-center col-12">{{ car.car_name }}</h3>
-                <div class="col-12 col-lg-4 flex-center flex-column">
-                  <img :src="'../src/img/uploads/' + car.image" class="img-fluid" />
-                </div>
-                <p class="col-12 col-lg-4">
-                  Marka : {{ car.brand }}<br>
-                  Gorivo : {{ car.fuel }}<br>
-                  Tip : {{ car.type }}<br>
-                  Godina : {{ car.year_made}}<br>
-                </p>
-                <p class="col-12 col-lg-4">
-                  Kilometraža : {{ car.mileage }}<br>
-                  Snaga : {{ car.power }}<br>
-                  Mjenjač : {{ car.transmission }}<br>
-                  Cijena : {{ car.price }} KM/dan<br>
-                </p>
-              </div>
+            </div>
+            <div class="tab-pane" id="aktivne" role="tabpanel">
+              Aktivne
+            </div>
           </div>
         </div>
     </div>
@@ -233,19 +241,19 @@ $html .= <<<HTML
 <div class="modal fade roraos-modal" tabindex="-1" role="dialog" id="deleteModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-         <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/editCar.php" autocomplete="off" id="edit-car-form" enctype="multipart/form-data">
-         <input type="hidden" name="carId" :value="deleteCarId">
-         <button type="submit" class="hide-button"></button>
-         </form>
             <div class="modal-header">
                 <h5>Potvrda uklanjanja oglasa</h5>
             </div>
             <div class="modal-body">
-                <p>Jeste li sigurni da želite ukloniti ovaj oglas?</p>
+              <p>Jeste li sigurni da želite ukloniti ovaj oglas?</p>
+              <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/deleteCar.php" autocomplete="off" id="delete-car-form">
+              <input type="hidden" name="delete_id" :value="deleteCarId">
+              <button type="submit" class="hide-button"></button>
+            </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok" onclick="deleteCar()">Delete</a>
             </div>
         </div>
     </div>
@@ -258,6 +266,10 @@ $html .= <<<HTML
 
   var editCar = function () {
     $("#edit-car-form").find('[type="submit"]').trigger('click');
+  }
+
+  var deleteCar = function () {
+    $("#delete-car-form").find('[type="submit"]').trigger('click');
   }
 
   var end = 1930;

@@ -68,6 +68,8 @@
 
 .add-car{
 	transition: ease .5s;
+	border-bottom: none;
+	padding: 10px;
 }
 
 .add-car:hover{
