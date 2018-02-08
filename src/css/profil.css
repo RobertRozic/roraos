@@ -74,3 +74,25 @@
 	background-color: rgba(255,255,255, 0.6);
 	cursor: pointer;
 }
+
+.modal-content {
+	background-color: rgba(25, 181, 254, 1);
+}
+
+.modal-dialog {
+max-width: 800px;
+}
+
+.rora-form input {
+	background: transparent;
+	outline: transparent;
+	border: none;
+	color: #FFF;
+	padding-left: 5px;
+	border: 1px solid white;
+	margin-left: 20px;	
+}
+
+.form-osta {
+	background: rgba(0,0,0,0.3)!important;
+}

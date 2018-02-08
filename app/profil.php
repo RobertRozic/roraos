@@ -5,6 +5,8 @@ require 'header.php';
 
 require 'navbar.php';
 
+
+
 $html = '';
 
 $html .= <<<HTML
@@ -65,7 +67,42 @@ $html .= <<<HTML
                                 Cijena : {{ car.price }} KM/dan<br>
                         </p>
                     </div>
-                    <div class="row profil-oglasi flex-center flex-column add-car">
+                    <div class="row profil-oglasi flex-center flex-column add-car" data-toggle="modal" data-target="#myModal">
+                        <div id="myModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h3 class="modal-title" id="myModalLabel"> Ispunite podatke </h3>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>    
+                                    <div class="modal-body">
+                                        <div class="row d-flex flex-column justify-content-center align-items-center">
+                                            <div class="col-10 col-md-8 col-lg-7 form_wrapper form-osta">
+                                                <form class="d-flex flex-column rora-form" method="post" action="index.php" autocomplete="off">
+                                                <label>Ime automobila:<input type="text" name="CarName" required></label>
+                                                <label>Vrsta automobila:<input type="text" name="CarBrand" required></label>
+                                                <label>Gorivo:<input type="text" name="CarFuel" required></label>
+                                                <label>Tip:<input type="text" name="CarType" required></label>
+                                                <label>Kilometraža:<input type="text" name="CarMileage" required></label>
+                                                <label>Snaga:<input type="text" name="CarPower" required></label>
+                                                <div>Mjenjač:
+                                                    <label class="radio-inline"><input type="radio" name="CarTransmission
+                                                    ">Manualni</label>
+                                                    <label class="radio-inline"><input type="radio" name="CarTransmission">Automatik</label>
+                                                </div>
+                                                <label>Cijena/Dan:<input type="text" name="CarPrice" required></label>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Potvrdi</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Zatvori</button>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
                         <h2>Dodajte oglas</h2>
                         <i class="fas fa-2x fa-plus-circle button-add"></i>
                     </div>
