@@ -18,7 +18,7 @@ if ( $mysqli->query($sql) ) {
 	$_SESSION['message'] = 'Uspjesno ste potvrdili rezervaciju!';
 	header("location: ../../app/login/message.php");
 } else {
-	$_SESSION['message'] = 'Doslo je do pogreske!';
+	$_SESSION['message'] = $sql;
 	header("location: ../../app/login/error.php");
 }
 

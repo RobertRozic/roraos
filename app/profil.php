@@ -78,8 +78,28 @@ $html .= <<<HTML
                   </p>
                 </div>
             </div>
-            <div class="tab-pane" id="aktivne" role="tabpanel">
-              Aktivne
+            <div class="container-fluid tab-pane active" role="tabpanel" id="aktivne">
+                <div v-for="reservation in myReservations" class="row profil-oglasi flex-center">
+                  <div class="col 12 d-flex justify-content-between">
+                     <i data-toggle="modal" data-target="#deleteContractModal" aria-hidden="true" v-on:click="setDeleteContract(reservation.contract.id)" class="option fas fa fa-times"></i>
+                  </div>
+                  <h3 class="text-center col-12">{{ reservation.car.car_name }}</h3>
+                  <div class="col-12 col-lg-4 flex-center flex-column">
+                    <img :src="'../src/img/uploads/' + reservation.car.image" class="img-fluid" />
+                  </div>
+                  <p class="col-12 col-lg-4">
+                    Marka : {{ reservation.car.brand }}<br>
+                    Gorivo : {{ reservation.car.fuel }}<br>
+                    Tip : {{ reservation.car.type }}<br>
+                    Godina : {{ reservation.car.year_made}}<br>
+                  </p>
+                  <p class="col-12 col-lg-4">
+                    Kilometraža : {{ reservation.car.mileage }}<br>
+                    Snaga : {{ reservation.car.power }}<br>
+                    Mjenjač : {{ reservation.car.transmission }}<br>
+                    Cijena : {{ reservation.car.price }} KM/dan<br>
+                  </p>
+                </div>
             </div>
           </div>
         </div>
@@ -259,6 +279,27 @@ $html .= <<<HTML
     </div>
 </div>
 
+<div class="modal fade roraos-modal" tabindex="-1" role="dialog" id="deleteContractModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Potvrda uklanjanja rezervacije</h5>
+            </div>
+            <div class="modal-body">
+              <p>Jeste li sigurni da želite ukloniti rezervaciju?</p>
+              <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/deleteContract.php" autocomplete="off" id="delete-contract-form">
+              <input type="hidden" name="delete_contract" :value="deleteContractId">
+              <button type="submit" class="hide-button"></button>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok" onclick="deleteContract()">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
   var addCar = function () {
     $("#car-form").find('[type="submit"]').trigger('click');
@@ -270,6 +311,10 @@ $html .= <<<HTML
 
   var deleteCar = function () {
     $("#delete-car-form").find('[type="submit"]').trigger('click');
+  }
+
+  var deleteContract = function () {
+    $("#delete-contract-form").find('[type="submit"]').trigger('click');
   }
 
   var end = 1930;

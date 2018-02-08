@@ -72,7 +72,7 @@ $html .= <<<HTML
     </div>
   </div>
 
-  <div class="modal fade" id="myModal">
+  <div class="modal fade roraos-modal" id="myModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content form_wrapper">
         <div class="modal-header">

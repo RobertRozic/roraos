@@ -13,8 +13,10 @@ var app = new Vue({
     search: search_text,
     users : [],
     cars: [],
+    contracts: [],
     editCar: {},
     deleteCarId: undefined,
+    deleteContractId: undefined
   },
   methods: {
     getCars: function(){
@@ -29,12 +31,21 @@ var app = new Vue({
         self.users = data;
       });
     },
+    getContracts: function(){
+      var self = this;
+      $.get('../src/scripts/contracts_JSON.php', function(data){
+        self.contracts = data;
+      });
+    },
     setEditCar: function(car){
       this.editCar = car;
     },
     setDeleteCar: function(id){
       this.deleteCarId = id;
     },
+    setDeleteContract: function(id){
+      this.deleteContractId = id;
+    }
   },
   computed: {
     filterCars() {
@@ -51,11 +62,30 @@ var app = new Vue({
       return this.cars.filter(car =>{
         return car.sponsored == 1;
       }).sort(byName);
+    },
+    myReservations() {
+        var reservations = [];
+        var myContracts = this.contracts.filter(contract =>  {
+          return contract.buyer_id = userId;
+        })
+        var self = this;
+        myContracts.forEach(function(contract){
+          console.log(self.cars);
+          var reservation = {
+            contract: contract,
+            car: self.cars.find(function(car){
+              return car.id = contract.car_id;
+            })
+          }
+          reservations.push(reservation);
+        })
+        return reservations;
     }
   },
   beforeMount() {
     this.getCars();
     this.getUsers();
+    this.getContracts();
   }
 });
 
