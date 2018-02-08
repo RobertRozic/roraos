@@ -18,6 +18,7 @@ $header .= <<<HTML
 		<link href="../src/css/app.css" rel="stylesheet" type="text/css">
 		<link href="../src/css/profil.css" rel="stylesheet" type="text/css">
 		<link href="../src/css/search.css" rel="stylesheet" type="text/css">
+		<link href="../src/css/form.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 	<div id="app">

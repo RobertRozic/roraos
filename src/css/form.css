@@ -17,7 +17,7 @@
 	margin: 0 10px !important;
 }
 
-.edit-input {
+#edit-form .edit-input {
 	background: transparent;
 	outline: transparent;
 	border: none;
@@ -26,17 +26,11 @@
 	width: 100%;
 }
 
-.phone_input > p {
+#edit-form .phone_input > p {
 	margin: 0;
 	padding-left: 5px;
 }
 
-.phone_input > input {
+#edit-form .phone_input > input {
 	margin: 0;
-}
-
-.submitChanges {
-	border: none;
-	outline: none;
-	color: #212121;
 }

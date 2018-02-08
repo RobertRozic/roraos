@@ -16,13 +16,14 @@ $html .= <<<HTML
                     <a href="profil.php">
                         <i class="fa fa-2x fa-times option" aria-hidden="true"></i>
                     </a>
-                    <i class="fa fa-2x fa-check option" id="save" aria-hidden="true"></i>
+                    <i class="fa fa-2x fa-check option" id="save" aria-hidden="true"
+                    onclick="submitEdit()"></i>
                 </div>
                 <div class="d-flex flex-column align-items-center">
                     <img src="../src/img/blank-profile.png" class="img-fluid">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
-                <form id="edit-form" class="form-group" method="post" action="../src/scripts/editInfo.php">
+                <form id="edit-form" class="form-group" method="post" action="../src/scripts/editProfile.php">
                     <div>
                         <label><i class="fa fa-fw fa-user" aria-hidden="true"></i></label>
                         <input name="newName" class="edit-input" type="text" value="{$name}" required>
@@ -45,6 +46,11 @@ $html .= <<<HTML
             </div>
         </div>
     </div>
+    <script>
+        var submitEdit = function () {
+            document.getElementById("edit-form").submit();
+        }
+    </script>
 HTML;
 
 echo $html;
