@@ -23,7 +23,7 @@ $html .= <<<HTML
                     <img src="../src/img/blank-profile.png" class="img-fluid">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
-                <form id="edit-form" class="form-group" method="post" action="../src/scripts/editProfile.php">
+                <form id="edit-form" class="roraos-form" method="post" action="../src/scripts/editProfile.php">
                     <div>
                         <label><i class="fa fa-fw fa-user" aria-hidden="true"></i></label>
                         <input name="newName" class="edit-input" type="text" value="{$name}" required>

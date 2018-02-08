@@ -14,10 +14,10 @@ $power = $mysqli->escape_string($_POST['power']);
 $transmission = $mysqli->escape_string($_POST['transmission']);
 $owner_id = $_SESSION['id'];
 
-//require 'uploadImage.php';
+require 'uploadImage.php';
 
-$sql = "INSERT INTO cars (type, brand, fuel, price, owner_id, year_made, mileage, power, transmission, car_name, image) "
-			. "VALUES ('$type','$brand','$fuel', '$price', '$owner_id', '$year_made', '$mileage', '$power', '$transmission', '$car_name', 'audi.jpg')";
+$sql = "INSERT INTO cars (type, brand, fuel, price, owner_id, year_made, mileage, power, transmission, car_name, image, date_added) "
+			. "VALUES ('$type','$brand','$fuel', '$price', '$owner_id', '$year_made', '$mileage', '$power', '$transmission', '$car_name', '$target_file', '$date')";
 
 if ( $mysqli->query($sql) ) {
 	$_SESSION['message'] = 'Uspjesno ste dodali oglas!';
