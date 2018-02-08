@@ -1,0 +1,42 @@
+/*Edit profile*/
+#edit-form {
+	margin-top: 30px!important;
+	margin-bottom: 20px!important;
+}
+
+#edit-form > div {
+	display: flex;
+	color: #FFF;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 1px solid white;
+	margin: 10px 0;
+}
+
+#edit-form label {
+	margin: 0 10px !important;
+}
+
+.edit-input {
+	background: transparent;
+	outline: transparent;
+	border: none;
+	color: #FFF;
+	padding-left: 5px;
+	width: 100%;
+}
+
+.phone_input > p {
+	margin: 0;
+	padding-left: 5px;
+}
+
+.phone_input > input {
+	margin: 0;
+}
+
+.submitChanges {
+	border: none;
+	outline: none;
+	color: #212121;
+}
