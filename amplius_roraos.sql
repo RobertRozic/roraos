@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2018 at 12:54 AM
+-- Generation Time: Feb 08, 2018 at 03:05 AM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -33,7 +33,7 @@ CREATE TABLE `cars` (
   `fuel` varchar(6) NOT NULL,
   `price` int(11) NOT NULL,
   `owner_id` int(11) NOT NULL,
-  `year_made` year(4) NOT NULL,
+  `year_made` int(4) NOT NULL,
   `mileage` int(20) NOT NULL,
   `power` int(10) NOT NULL,
   `transmission` varchar(10) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `password`, `hash`, `account_type`, `status`) VALUES
-(38, 'Robert', 'RoziÄ‡', 'r.rozic97@gmail.com', '63125327', 'Ilici 313', '$2y$10$Hn.aEHqI9IwVKcbhI2Gs1eDvzkblT1OtYUY8N3nfJkmTnNq/nUlY.', 'd86ea612dec96096c5e0fcc8dd42ab6d', 'user', 1),
+(38, 'Robert', 'Rozic', 'r.rozic97@gmail.com', '63125327', 'Ilici 313', '$2y$10$Hn.aEHqI9IwVKcbhI2Gs1eDvzkblT1OtYUY8N3nfJkmTnNq/nUlY.', 'd86ea612dec96096c5e0fcc8dd42ab6d', 'user', 1),
 (39, 'fsese', 'fse', 'fesfe@gmail.com', '3123123', NULL, '$2y$10$fC75VhMWUbPfx.2FZPjHaO2t8NVntH1PErWmEHjX6qMzoDjRW73Uu', 'db85e2590b6109813dafa101ceb2faeb', 'user', 1);
 
 --
@@ -104,7 +104,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --
