@@ -53,8 +53,8 @@ $html .= <<<HTML
           <div class="container-fluid" id="profil_oglasi">
               <div v-for="car in myCars" class="row profil-oglasi flex-center">
                 <div class="col 12 d-flex justify-content-between">
-                   <i data-toggle="" data-target="" aria-hidden="true" class="option fas fa fa-times option-dark"></i>
-                   <i data-toggle="modal" data-target="#myModal" aria-hidden="true" class="option fas fa fa-edit option-dark"></i>
+                   <i data-toggle="" data-target="" aria-hidden="true" class="option fas fa fa-times"></i>
+                   <i data-toggle="modal" data-target="#editCarModal" aria-hidden="true" v-on:click="setEditCar(car)" class="option fas fa fa-edit"></i>
                 </div>
                 <h3 class="text-center col-12">{{ car.car_name }}</h3>
                 <div class="col-12 col-lg-4 flex-center flex-column">
@@ -78,7 +78,7 @@ $html .= <<<HTML
     </div>
   </div>
 
-<div class="modal fade" id="myModal">
+<div class="modal fade roraos-modal" id="myModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content form_wrapper">
       <div class="modal-header">
@@ -114,7 +114,7 @@ $html .= <<<HTML
           </div>
           <div>
             <label>Godina:</label>
-            <select id="year" name="year"></select>
+            <select class="year" name="year"></select>
           </div>
           <div>
             <label>Kilometraža:</label>
@@ -153,7 +153,7 @@ $html .= <<<HTML
   </div>
 </div>
 
-<div class="modal fade" id="myModal">
+<div class="modal fade roraos-modal" id="editCarModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content form_wrapper">
       <div class="modal-header">
@@ -163,23 +163,23 @@ $html .= <<<HTML
         </button>
       </div>
       <div class="modal-body d-flex flex-column justify-content-center">
-        <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/addCar.php" autocomplete="off" id="car-form" enctype="multipart/form-data">
+        <form class="d-flex flex-column roraos-form" method="post" action="../src/scripts/editCar.php" autocomplete="off" id="edit-car-form" enctype="multipart/form-data">
           <div>
             <label>Ime automobila:</label>
-            <input type="text" name="car_name" value="" required>
+            <input type="text" name="car_name" :value="editCar.car_name" required>
           </div>
           <div>
             <label>Marka automobila:</label>
-            <input type="text" name="brand" required>
+            <input type="text" name="brand" :value="editCar.brand" required>
           </div>
           <div class="justify-content-center radio-roraos">
             <label>Gorivo:</label>
-            <input type="radio" name="fuel" value="diesel" required>Diesel
-            <input type="radio" name="fuel" value="petrol" required>Benzin
+            <input type="radio" name="fuel" value="diesel" v-model="editCar.fuel" required>Diesel
+            <input type="radio" name="fuel" value="petrol" v-model="editCar.fuel" required>Benzin
           </div>
           <div>
             <label>Tip:</label>
-            <select id="type" name="type">
+            <select id="type" name="type" :value="editCar.type">
               <option value="sedan">Sedan</option>
               <option value="cabrio">Kabriolet</option>
               <option value="sportback">Sportback</option>
@@ -189,40 +189,42 @@ $html .= <<<HTML
           </div>
           <div>
             <label>Godina:</label>
-            <select id="year" name="year"></select>
+            <select class="year" name="year" :value="editCar.year_made"></select>
           </div>
           <div>
             <label>Kilometraža:</label>
-            <input type="text" name="mileage" required>
+            <input type="text" name="mileage" :value="editCar.mileage" required>
           </div>
           <div>
             <label>Konjskih snaga:</label>
-            <input type="text" name="power" required>
+            <input type="text" name="power" :value="editCar.power" required>
           </div>
           <div class="justify-content-center radio-roraos">
             <label>Mjenjač</label>
-            <input type="radio" name="transmission" value="manual" required>Manualni
-            <input type="radio" name="transmission" value="automatic" required>Automatik
+            <input type="radio" name="transmission" value="manual" v-model="editCar.transmission" required>Manualni
+            <input type="radio" name="transmission" value="automatic" v-model="editCar.transmission" required>Automatik
           </div>
           <div>
             <label>Cijena/Dan:</label>
-            <input type="text" name="price" required>
+            <input type="text" name="price" :value="editCar.price" required>
           </div>  
           <div class="roraos-file">
               <div class="input-group">
                 <label class="input-group-btn">
                   <span class="btn btn-primary">
-                      Slika auta&hellip; <input type="file" id="fileToUpload" name="fileToUpload" required style="display: none;">
+                      Nova slika auta&hellip;
+                      <input type="file" id="fileToUpload" name="fileToUpload" style="display: none;">
                   </span>
                 </label>
                 <input type="text" class="form-control" readonly>
               </div>
           </div>
+          <input type="hidden" name="car_id" :value="editCar.id">
           <button type="submit" class="hide-button"></button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="submit_btn" name="submit" onclick="addCar()">Potvrdi</button>
+        <button type="submit" class="submit_btn" name="submit" onclick="editCar()">Potvrdi</button>
       </div>
     </div>
   </div>
@@ -233,13 +235,21 @@ $html .= <<<HTML
     $("#car-form").find('[type="submit"]').trigger('click');
   }
 
-var end = 1930;
-var start = new Date().getFullYear();
-var options = "";
-for(var year = start ; year >= end; year--){
-  options += "<option>"+ year +"</option>";
-}
-document.getElementById("year").innerHTML = options;
+  var editCar = function () {
+    $("#edit-car-form").find('[type="submit"]').trigger('click');
+  }
+
+  var end = 1930;
+  var start = new Date().getFullYear();
+  var options = "";
+  for(var year = start ; year >= end; year--){
+   options += "<option>"+ year +"</option>";
+  }
+  var input_year = document.getElementsByClassName("year")
+  for(var i = 0; i < input_year.length; i++){
+    input_year[i].innerHTML = options;
+  }
+
 </script>
 HTML;
 

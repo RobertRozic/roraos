@@ -86,7 +86,7 @@
 	background-color: transparent;
 }
 
-#myModal .modal-content{
+.roraos-modal .modal-content{
 	background: rgb(25, 181, 254);
 	box-shadow: 8px 10px 20px 1px rgba(0, 0, 0, 0.75);
 	padding: 20px 40px;

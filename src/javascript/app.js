@@ -12,7 +12,8 @@ var app = new Vue({
     message: 'Hello Vue!',
     search: search_text,
     users : [],
-    cars: []
+    cars: [],
+    editCar: {}
   },
   methods: {
     getCars: function(){
@@ -26,6 +27,10 @@ var app = new Vue({
       $.get('../src/scripts/users_JSON.php', function(data){
         self.users = data;
       });
+    },
+    setEditCar: function(car){
+      this.editCar = car;
+      console.log(car);
     }
   },
   computed: {

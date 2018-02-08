@@ -1,9 +1,6 @@
 <?php
 require 'db.php';
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-
 session_start();
 
 $date_from = strtotime($mysqli->escape_string($_POST['date_from']));
@@ -16,13 +13,12 @@ $price = $mysqli->escape_string($_POST['price']);
 
 $sql = "INSERT INTO contract (date_from, date_to, buyer_id, car_id, price) "
 			. "VALUES ('$from','$to','$buyer_id', '$car_id', '$price')";
-$_SESSION['message'] = $sql;
 
 if ( $mysqli->query($sql) ) {
 	$_SESSION['message'] = 'Uspjesno ste potvrdili rezervaciju!';
 	header("location: ../../app/login/message.php");
 } else {
-	//$_SESSION['message'] = 'Doslo je do pogreske!';
+	$_SESSION['message'] = 'Doslo je do pogreske!';
 	header("location: ../../app/login/error.php");
 }
 

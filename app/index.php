@@ -91,16 +91,14 @@ $html .= <<<HTML
               <label>Datum do:</label>
               <input type="date" name="date_to" id="date_to" v-on:change="updateTotal()" required>
             </div>
-              <input type="hidden" name="car_id" id="car_id">
-              <input type="hidden" name="price" id="price">
+            <input type="hidden" name="car_id" id="car_id">
+            <input type="hidden" name="price" id="price">
             <button type="submit" class="hide-button"></button>
-
           </form>
-            <div class="d-flex flex-row justify-content-between">
-              <p>Ukupna cijena je:</p>
-              <div id="totalPrice">
-              </div>
-            </div>
+          <div class="d-flex flex-row justify-content-between">
+            <p>Ukupna cijena je:</p>
+            <div id="totalPrice"></div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="submit_btn" name="submit" onclick="addContract()">Potvrdi</button>
