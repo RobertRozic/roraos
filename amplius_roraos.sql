@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2018 at 06:22 PM
+-- Generation Time: Feb 14, 2018 at 02:44 AM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -40,19 +40,18 @@ CREATE TABLE `cars` (
   `car_name` varchar(30) NOT NULL,
   `image` varchar(50) NOT NULL,
   `sponsored` int(1) NOT NULL DEFAULT '0',
-  `date_added` date NOT NULL DEFAULT '1970-01-01'
+  `date_added` date NOT NULL DEFAULT '1970-01-01',
+  `active` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cars`
 --
 
-INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_made`, `mileage`, `power`, `transmission`, `car_name`, `image`, `sponsored`, `date_added`) VALUES
-(1, 'sedan', 'toyota', 'diesel', 120, 39, 2007, 197000, 136, 'manual', 'Toyota Corolla', 'audi.jpg', 0, '1970-01-01'),
-(2, 'cabrio', 'bmw', 'petrol', 120, 38, 2008, 45000, 320, 'automatic', 'Bmw 330i', 'audi.jpg', 0, '1970-01-01'),
-(3, 'sportback', 'audi', 'petrol', 250, 38, 2013, 24323, 420, 'manual', 'Audi RS3', 'audi.jpg', 1, '1970-01-01'),
-(4, 'sedan', 'bmw', 'diesel', 70, 38, 2003, 221334, 145, 'manual', 'Bmw 320d', 'audi.jpg', 1, '1970-01-01'),
-(5, 'gradsko', 'Fiat', 'diesel', 65, 38, 2007, 114000, 80, 'manual', 'Fiat Punto', 'audi.jpg', 0, '1970-01-01');
+INSERT INTO `cars` (`id`, `type`, `brand`, `fuel`, `price`, `owner_id`, `year_made`, `mileage`, `power`, `transmission`, `car_name`, `image`, `sponsored`, `date_added`, `active`) VALUES
+(2, 'cabrio', 'bmw', 'petrol', 120, 38, 2008, 45000, 325, 'automatic', 'Bmw 330i', 'audi.jpg', 0, '1970-01-01', 1),
+(3, 'sportback', 'audi', 'diesel', 250, 38, 2013, 24323, 425, 'manual', 'Audi RS3', 'audi.jpg', 1, '1970-01-01', 1),
+(4, 'sedan', 'bmw', 'diesel', 70, 38, 2003, 221334, 145, 'manual', 'Bmw 320d', 'audi.jpg', 1, '1970-01-01', 1);
 
 -- --------------------------------------------------------
 
@@ -93,8 +92,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `password`, `hash`, `account_type`, `status`) VALUES
-(38, 'Robert', 'Rozic', 'r.rozic97@gmail.com', '63125327', 'Ilici 3133', '$2y$10$Hn.aEHqI9IwVKcbhI2Gs1eDvzkblT1OtYUY8N3nfJkmTnNq/nUlY.', 'd86ea612dec96096c5e0fcc8dd42ab6d', 'user', 1),
-(39, 'fsese', 'fse', 'fesfe@gmail.com', '3123123', NULL, '$2y$10$fC75VhMWUbPfx.2FZPjHaO2t8NVntH1PErWmEHjX6qMzoDjRW73Uu', 'db85e2590b6109813dafa101ceb2faeb', 'user', 1);
+(38, 'Robert', 'Rozic', 'r.rozic97@gmail.com', '63125327', 'Ilici 313', '$2y$10$Hn.aEHqI9IwVKcbhI2Gs1eDvzkblT1OtYUY8N3nfJkmTnNq/nUlY.', 'd86ea612dec96096c5e0fcc8dd42ab6d', 'admin', 1),
+(39, 'fsese', 'fse', 'fesfe@gmail.com', '3123123', NULL, '$2y$10$fC75VhMWUbPfx.2FZPjHaO2t8NVntH1PErWmEHjX6qMzoDjRW73Uu', 'db85e2590b6109813dafa101ceb2faeb', 'user', 1),
+(40, 'Mario', 'Rajic', 'mariorajic7@gmail.com', '63428704', NULL, '$2y$10$kklmdnZ6ageUlSp8fQxDAeqX89nvrbE4DD6nS71GlRm2PGiAdUgRK', '9431c87f273e507e6040fcb07dcb4509', 'user', 1);
 
 --
 -- Indexes for dumped tables
@@ -127,12 +127,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `contract`
+--
+ALTER TABLE `contract`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- Constraints for dumped tables
 --
