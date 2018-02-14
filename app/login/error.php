@@ -2,9 +2,9 @@
 session_start();
 
 if(isset($_SESSION['message']) AND !empty($_SESSION['message'])):
-	$message = $_SESSION['message'];
+  $message = $_SESSION['message'];
 else:
-	header( "location: index.php" );
+  header( "location: index.php" );
 endif;
 
 require 'header.php';
@@ -12,17 +12,17 @@ require 'header.php';
 $html = '';
 
 $html .= <<<HTML
-	<div class="container-fluid sign_up_in">
-		<div class="row d-flex flex-column justify-content-center align-items-center">
-			<div class="col-10 col-md-6 col-lg-4 form_wrapper">
-				<img src="../../src/img/logo.png" class="img-fluid logo"/>
-				<div class="d-flex flex-column justify-content-center">
-					<h5 class="text-center message">{$message}</h5>
-					<a href="javascript:history.back()"><button class="submit_btn">Pokušaj ponovno</button></a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container-fluid sign_up_in">
+    <div class="row d-flex flex-column justify-content-center align-items-center">
+      <div class="col-10 col-md-6 col-lg-4 form_wrapper">
+        <img src="../../src/img/logo.png" class="img-fluid logo"/>
+        <div class="d-flex flex-column justify-content-center">
+          <h5 class="text-center message">{$message}</h5>
+          <a href="javascript:history.back()"><button class="submit_btn">Pokušaj ponovno</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
 HTML;
 
 echo $html;
