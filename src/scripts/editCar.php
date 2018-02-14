@@ -18,7 +18,7 @@ $transmission = $mysqli->escape_string($_POST['transmission']);
 $check = $mysqli->query("SELECT * FROM cars WHERE id='$car_id'");
 if($check->num_rows > 0){
     $car = $check->fetch_assoc();
-    if($car['owner_id'] != $_SESSION['id']){
+    if($car['owner_id'] != $_SESSION['id'] || $_SESSION['account_type'] == 'admin'){
         $_SESSION['message'] = 'Neispravan zahtjev!';
         header("location: ../../app/login/error.php");
     }

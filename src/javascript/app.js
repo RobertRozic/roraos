@@ -13,8 +13,10 @@ var app = new Vue({
     search: search_text,
     users : [],
     cars: [],
+    inactiveCars: [],
     contracts: [],
     editCar: {},
+    confirmCarId: undefined,
     deleteCarId: undefined,
     deleteContractId: undefined
   },
@@ -23,6 +25,12 @@ var app = new Vue({
       var self = this;
       $.get('../src/scripts/cars_JSON.php', function(data){
         self.cars = data;
+      });
+    },
+    getInactiveCars: function(){
+      var self = this;
+      $.get('../src/scripts/inactive_cars_JSON.php', function(data){
+        self.inactiveCars = data;
       });
     },
     getUsers: function(){
@@ -40,11 +48,23 @@ var app = new Vue({
     setEditCar: function(car){
       this.editCar = car;
     },
+    setConfirmCar: function(id){
+      this.confirmCarId = id;
+    },
     setDeleteCar: function(id){
       this.deleteCarId = id;
     },
     setDeleteContract: function(id){
       this.deleteContractId = id;
+    },
+    getUserNameById: function(owner_id){
+      var owner;
+      this.users.forEach(function(user){
+        if(user.id == owner_id){
+          owner = user;
+        }
+      })
+      return owner.first_name + ' ' + owner.last_name;
     }
   },
   computed: {
@@ -66,24 +86,63 @@ var app = new Vue({
     myReservations() {
         var reservations = [];
         var myContracts = this.contracts.filter(contract =>  {
-          return contract.buyer_id = userId;
+          return contract.buyer_id == userId;
         })
         var self = this;
         myContracts.forEach(function(contract){
-          console.log(self.cars);
           var reservation = {
             contract: contract,
             car: self.cars.find(function(car){
-              return car.id = contract.car_id;
+              return car.id == contract.car_id;
             })
           }
           reservations.push(reservation);
         })
         return reservations;
+    },
+    myReceivedReservations(){
+      var reservations = [];
+      var myCars = this.cars.filter(car =>{
+          return car.owner_id == userId;
+        }).sort(byName);
+      var self = this;
+      myCars.forEach(function(car) {
+        self.contracts.forEach(function(contract){
+          if(contract.car_id == car.id){
+            var reservation = {
+              contract: contract,
+              car : car
+            }
+            reservations.push(reservation);
+          };
+        });
+      });
+      return reservations;
+    },
+    inactiveCars(){
+      return this.inactiveCars.sort(byName);
+    },
+    allCars(){
+      return this.cars.sort(byName);
+    },
+    allReservations(){
+      var reservations = [];
+      var self = this;
+      this.contracts.forEach(function(contract){
+        var reservation = {
+          contract: contract,
+          car: self.cars.find(function(car){
+            return car.id == contract.car_id;
+          })
+        }
+        reservations.push(reservation);
+      })
+      return reservations;
     }
   },
-  beforeMount() {
+  created() {
     this.getCars();
+    this.getInactiveCars();
     this.getUsers();
     this.getContracts();
   }

@@ -3,7 +3,7 @@ header('Content-Type: application/json; charset=utf-8;');
 
 require 'db.php';
 
-$sql = "SELECT * FROM cars WHERE active = 1";
+$sql = "SELECT * FROM cars WHERE active = 0";
 
 $result = $mysqli->query($sql);
 
