@@ -1,7 +1,6 @@
 <?php
 $target_dir = "../img/uploads/";
 $date = new DateTime();
-echo $date->getTimestamp();
 $image = $date->getTimestamp() . basename($_FILES["fileToUpload"]["name"]);
 $target_file = $target_dir . $image;
 $uploadOk = 1;

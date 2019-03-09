@@ -1,0 +1,16 @@
+[14-Feb-2018 17:04:38 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:04:39 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:04:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:04:44 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 3
+[14-Feb-2018 17:04:44 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 4
+[14-Feb-2018 17:04:46 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:04:52 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:04:52 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 3
+[14-Feb-2018 17:04:52 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 4
+[14-Feb-2018 17:04:53 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_swat'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:05:11 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_roraos'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:05:18 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_roraos'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:05:18 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 3
+[14-Feb-2018 17:05:18 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/amplius/public_html/roraos/app/login/registration.php on line 4
+[14-Feb-2018 17:05:19 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_roraos'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7
+[14-Feb-2018 17:05:21 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'amplius_roraos'@'localhost' (using password: YES) in /home/amplius/public_html/roraos/src/scripts/db.php on line 7

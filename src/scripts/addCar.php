@@ -21,7 +21,6 @@ require 'uploadImage.php';
 $sql = "INSERT INTO cars (type, brand, fuel, price, owner_id, year_made, mileage, power, transmission, car_name, image, date_added) "
 			. "VALUES ('$type','$brand','$fuel', '$price', '$owner_id', '$year_made', '$mileage', '$power', '$transmission', '$car_name', '$image', '$date_added')";
 
-
 if ( $mysqli->query($sql) ) {
 	$_SESSION['message'] = 'Uspjesno ste dodali oglas!';
 	header("location: ../../app/login/message.php");

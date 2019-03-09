@@ -30,12 +30,12 @@
       </div>
     </nav>
     <div class="container-fluid">
-      <section id="vizija" class="row d-flex flex-column justify-content-center align-items-center">
-        <a href="index.php"><img src="src/img/logo.png" class="img-fluid logo"/></a>
+      <section id="vizija-cover" class="row flex-center flex-column">
+        <img src="src/img/logo.png" class="img-fluid logo"/>
         <p class="text-center">Mi Vas pokrećemo!</p>
         <h2>Vizija</h2>
       </section>
-      <section id="vizija-tekst" class="row d-flex flex-column justify-content-center align-items-center">
+      <section id="vizija-tekst" class="row flex-center flex-column">
       <div class="col-10">
         <p class="text-justify">
           Roraos.ba (Automobili) je stranica koja je zamišljena da svim registriranim korisnicima omogući brzi pristup željenom vozilu bez obzira gdje se oni nalaze. Tu mogućnost bi korisnici trebali pružiti jedni drugima, tako što će kada se registriraju imati mogućnost i postaviti oglas za svoje vozilo koje će drugi moći iznajmiti. Realizacija ovakve ideje u teoriji se čini jednostavno, ali kao što smo i nače navikli, u praksi to ipak ide malo drugačije. Potrebno je napraviti siguran sustav u kojem će se svi podatci korisnika strogo čuvati, te je također potrebno i filtrirati sadržaj od neželjenih oglasa. Zbog toga, osim običnih, svakodnevnih korisnika, Roraos.ba ima i administratore kojima su dane veće ovlasti upravljanja svim oglasima. <br><br>
@@ -45,7 +45,6 @@
           Za ovaj projekt potrebno je koristiti i savladati dosta tehnologija za razvoj web aplikacija, a sve te tehnologije, te način na koji su one korištene, možete pregledati na našoj naslovnoj stranici ili <a href="index.php#projekt">klikom ovdje!</a>
         </p>
       </div>
-
       </section>
       <p id="copyright"> 2018 Roraos.ba © All rights reserved. </p>  
     </div>

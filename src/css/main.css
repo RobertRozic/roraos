@@ -141,20 +141,26 @@ html, body {
 }
 
 /* Vizija */
-#vizija{
-  color: #FFF;
-  min-height: 40vh;
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vizija-cover{
+  min-height: 50vh;
   background: url('../img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   padding: 20px;
-  padding-top: 60px;
+  color: #FFF;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 1.5rem;
 }
 
 #vizija-tekst{
+  padding: 20px;
   min-height: 60vh;
 }
