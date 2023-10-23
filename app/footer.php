@@ -6,7 +6,7 @@ $footer .= <<<HTML
     <script src="../src/javascript/jquery-3.2.1.min.js"></script>
     <script src="../src/javascript/popper.min.js"></script>
     <script src="../src/javascript/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 
 
     <script type="text/javascript">

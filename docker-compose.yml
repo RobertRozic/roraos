@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - .:/var/www/html
+    ports:
+      - "8090:80"
+    depends_on:
+      - php
+      - db
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: amplius_roraos
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./amplius_roraos.sql:/docker-entrypoint-initdb.d/amplius_roraos.sql
+
+volumes:
+  db_data:
